@@ -36,7 +36,7 @@ function App() {
   };
 
   return (
-    <BrowserRouter>
+    <BrowserRouter basename="/AccuDaily">
       <div className="App">
         <Navbar />
         <Routes>
