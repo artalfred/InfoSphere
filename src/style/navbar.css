@@ -1,0 +1,37 @@
+#navbar {
+  transition: all 0.3s ease;
+}
+
+.navbar_show {
+  display: none;
+  transition: all 0.6s ease;
+  background: #fff;
+  margin-top: -3rem;
+}
+
+.fs-xxs {
+  font-size: 12px;
+}
+
+.fs-xs {
+  font-size: 14px;
+}
+
+img {
+  height: 4rem;
+}
+
+/* SEARCH BAR */
+
+.search_icon ion-icons {
+  color: #fff !important;
+}
+
+.scroll {
+  width: auto;
+  overflow-x: auto;
+}
+
+.scroll::-webkit-scrollbar {
+  display: none;
+}

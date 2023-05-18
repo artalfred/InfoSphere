@@ -1,0 +1,20 @@
+.card-img {
+  height: 200px;
+  object-fit: cover;
+  border-radius: 0;
+}
+
+.img_parent {
+  height: 26rem;
+  width: 100%;
+}
+
+.img_size_sm {
+  height: 12rem;
+}
+
+@media (max-width: 767.98px) {
+  .img_size_sm {
+    height: auto;
+  }
+}

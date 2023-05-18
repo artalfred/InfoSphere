@@ -1,0 +1,207 @@
+html {
+  padding: 0;
+  margin: 0;
+  box-sizing: border-box;
+  background: #fff;
+}
+
+body {
+  background-color: #fff0f3 !important;
+  font-family: "Roboto", sans-serif !important;
+  overflow-x: hidden;
+  line-height: normal !important;
+}
+
+@font-face {
+  font-family: BodyText;
+  src: url(../font/Georgia.ttf);
+}
+
+nav {
+  height: 4rem;
+}
+
+.normal-font {
+  font-family: "Open Sans", sans-serif !important;
+}
+
+.body-text {
+  font-family: Bodytext !important;
+}
+
+a {
+  text-decoration: none !important;
+  color: #590d22 !important;
+}
+
+.container-xxl {
+  padding: 0rem 1.4rem !important;
+}
+
+.logo img {
+  height: 3.8rem;
+}
+
+ul {
+  padding-left: 0rem !important;
+  margin: 0 !important;
+}
+
+li {
+  list-style: none !important;
+}
+
+p {
+  margin: 0 !important;
+  padding-bottom: 1rem;
+  font-size: 14px;
+}
+
+button {
+  border: none;
+  font-size: 16px !important;
+  background-color: #fff !important;
+}
+
+input {
+  box-shadow: none !important;
+}
+
+.App {
+  background: #fff;
+}
+
+#header {
+  z-index: 1000;
+  background: #fff;
+  transition: top 0.3s;
+}
+
+.f-xs {
+  font-size: 14px;
+}
+
+.icon-btn {
+  background: none;
+}
+
+.icons ion-icons {
+  height: 1.2rem;
+}
+
+/* FOOTER */
+.subscribe {
+  width: 50%;
+}
+
+.sidebar-menu {
+  width: 50%;
+}
+
+.hero-web {
+  display: block;
+}
+
+.hero-mobile {
+  display: none;
+}
+
+ion-icon {
+  font-size: 1.6rem;
+}
+
+.card {
+  border-radius: 0 !important;
+  border: 0 !important;
+}
+
+.card-body {
+  padding: 0rem 0rem 0rem 0rem !important;
+}
+
+@media (max-width: 991.98px) {
+  .subscribe {
+    width: 65%;
+  }
+
+  .img_card {
+    height: auto !important;
+  }
+
+  .img_size_sm {
+    height: auto;
+  }
+}
+
+@media (max-width: 767.98px) {
+  .subscribe {
+    width: 80%;
+  }
+
+  .log_account {
+    display: none !important;
+  }
+}
+
+@media (max-width: 575.98px) {
+  .logo img {
+    height: 2rem;
+  }
+
+  .subscribe {
+    width: 100%;
+  }
+
+  .subscribe button {
+    padding-left: 1rem !important;
+    padding-right: 1rem !important;
+  }
+
+  .sidebar-menu {
+    width: 75% !important;
+  }
+
+  #navbar {
+    height: 3rem !important;
+  }
+
+  .nav_links {
+    display: none !important;
+  }
+
+  .ads {
+    display: none !important;
+  }
+
+  .navbar_show_logo {
+    display: block !important;
+  }
+}
+
+@media (max-width: 425.98px) {
+  h5 {
+    font-size: 14px !important;
+  }
+
+  .logo img {
+    height: 1.6rem;
+  }
+
+  .sidebar-menu {
+    width: 90% !important;
+  }
+}
+
+@media (max-width: 375.98px) {
+  .footer-title {
+    font-size: 20px;
+  }
+
+  .footer-desc {
+    font-size: 16px;
+  }
+
+  .footer-desc br {
+    display: none;
+  }
+}

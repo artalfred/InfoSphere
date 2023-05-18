@@ -1,0 +1,13 @@
+.world {
+  height: 40rem;
+  width: 100%;
+}
+
+.world img {
+  max-height: 100%;
+  max-width: 100%;
+}
+
+.img_card {
+  height: 30rem;
+}
