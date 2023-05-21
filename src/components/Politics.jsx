@@ -271,7 +271,7 @@ export default function Politics({ Politics }) {
         </div>
 
         <div className="row gy-4 border-bottom mt-3 pb-4">
-          <h3 className="fw-bold body-text">P</h3>
+          <h3 className="fw-bold body-text">Politics</h3>
           {Politics.slice(4, 12).map((item, index) => {
             return (
               <div className="col-12 col-md-3" key={index}>
