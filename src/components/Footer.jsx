@@ -5,7 +5,7 @@ import "../style/footer.css";
 export default function Footer() {
   return (
     <div className="container-xxl">
-      <footer className="py-5">
+      <footer className="pt-5">
         <div className="row">
           <div className="col-6 col-md-2 mb-3">
             <h5 className="body-text fw-bold">News</h5>
