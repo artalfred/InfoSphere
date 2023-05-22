@@ -1,8 +1,8 @@
 import React from "react";
-import politics from "../img/cover/politics.png";
+import fashion from "../img/cover/fashion.png";
 import Cards from "./resusable/Cards";
 
-export default function Politics({ Politics }) {
+export default function Fashion({ Fashion }) {
   return (
     <div className="">
       <div className="position-relative">
@@ -10,7 +10,7 @@ export default function Politics({ Politics }) {
           className="w-100 overflow-hidden cover_img"
           style={{ height: "20rem" }}
         >
-          <img src={politics} alt="politics-cover" style={{ height: "auto" }} />
+          <img src={fashion} alt="fashion-cover" style={{ height: "auto" }} />
         </div>
       </div>
 
@@ -22,7 +22,7 @@ export default function Politics({ Politics }) {
               <div className="border-bottom d-flex gap-4 pb-3">
                 <div className="row">
                   <div className="col-12 col-md-4 col-lg-4 order-2 order-sm-2 order-md-2 order-lg-1">
-                    {Politics.slice(0, 2).map((item, index) => (
+                    {Fashion.slice(0, 3).map((item, index) => (
                       <div key={index}>
                         <a href={item.url}>
                           <div className="card ">
@@ -44,7 +44,7 @@ export default function Politics({ Politics }) {
                         </a>
                       </div>
                     ))}
-                    {Politics.slice(2, 3).map((item, index) => (
+                    {Fashion.slice(2, 3).map((item, index) => (
                       <div key={index}>
                         <a href={item.url}>
                           <div className="card">
@@ -69,15 +69,20 @@ export default function Politics({ Politics }) {
                   </div>
 
                   <div className="col-12 col-md-8 col-lg-8 order-1 order-sm-1 order-md-1 order-lg-2">
-                    {Politics.slice(3, 4).map((item, index) => (
+                    {Fashion.slice(3, 4).map((item, index) => (
                       <div key={index}>
                         <a href={item.url}>
                           <div className="card">
-                            <img
-                              src={item.multimedia?.[0]?.url || "Hello"}
-                              className="img-fluid "
-                              alt="..."
-                            />
+                            <div
+                              className="news_img_adjust overflow-hidden"
+                              style={{ maxHeight: "26rem" }}
+                            >
+                              <img
+                                src={item.multimedia?.[0]?.url || "Hello"}
+                                className="img-fluid"
+                                alt="..."
+                              />
+                            </div>
                             <div className="card-body mt-3">
                               <h2 className="fw-bold body-text">
                                 {item.title}
@@ -104,7 +109,7 @@ export default function Politics({ Politics }) {
               <div className="border-bottom d-grid gap-4 py-3">
                 <div className="row border-bottom">
                   <div className="col-12 col-md-4 col-lg-4">
-                    {Politics.slice(9, 11).map((item, index) => (
+                    {Fashion.slice(9, 11).map((item, index) => (
                       <div key={index}>
                         <a href={item.url}>
                           <div className="card ">
@@ -126,7 +131,7 @@ export default function Politics({ Politics }) {
                         </a>
                       </div>
                     ))}
-                    {Politics.slice(11, 12).map((item, index) => (
+                    {Fashion.slice(11, 12).map((item, index) => (
                       <div key={index}>
                         <a href={item.url}>
                           <div className="card">
@@ -150,7 +155,7 @@ export default function Politics({ Politics }) {
                     ))}
                   </div>
                   <div className="col-md-8 col-lg-8">
-                    {Politics.slice(12, 13).map((item, index) => (
+                    {Fashion.slice(12, 13).map((item, index) => (
                       <div key={index}>
                         <a href={item.url}>
                           <div className="card">
@@ -187,7 +192,7 @@ export default function Politics({ Politics }) {
 
                 {/* SECTION 3 */}
                 <div className="row gy-4">
-                  {Politics.slice(10, 16).map((item, index) => {
+                  {Fashion.slice(10, 16).map((item, index) => {
                     return (
                       <div className="col-12 col-md-4" key={index}>
                         <Cards
@@ -207,7 +212,7 @@ export default function Politics({ Politics }) {
 
           {/* SIDE NEWS */}
           <div className="col-xs-12 col-md-12 col-lg-3 border-start order-2 order-md-2 order-lg-2">
-            {Politics.slice(5, 6).map((item, index) => (
+            {Fashion.slice(5, 6).map((item, index) => (
               <div key={index}>
                 <a href={item.url}>
                   <div className="card ">
@@ -232,7 +237,7 @@ export default function Politics({ Politics }) {
                 </a>
               </div>
             ))}
-            {Politics.slice(12, 19).map((item, index) => (
+            {Fashion.slice(12, 19).map((item, index) => (
               <div key={index}>
                 <a href={item.url}>
                   <div className="card ">
@@ -252,7 +257,7 @@ export default function Politics({ Politics }) {
                 </a>
               </div>
             ))}
-            {Politics.slice(20, 21).map((item, index) => (
+            {Fashion.slice(20, 21).map((item, index) => (
               <div key={index}>
                 <a href={item.url}>
                   <div className="card ">
@@ -276,8 +281,8 @@ export default function Politics({ Politics }) {
         </div>
 
         <div className="row gy-4 border-bottom mt-3 pb-4">
-          <h3 className="fw-bold body-text">Politics</h3>
-          {Politics.slice(4, 12).map((item, index) => {
+          <h3 className="fw-bold body-text">Fashion</h3>
+          {Fashion.slice(4, 12).map((item, index) => {
             return (
               <div className="col-12 col-md-3" key={index}>
                 <Cards

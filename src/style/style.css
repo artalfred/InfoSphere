@@ -176,6 +176,10 @@ ion-icon {
   .navbar_show_logo {
     display: block !important;
   }
+
+  .cover_img {
+    height: 10rem !important;
+  }
 }
 
 @media (max-width: 425.98px) {
