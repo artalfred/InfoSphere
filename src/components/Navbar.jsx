@@ -50,10 +50,21 @@ export default function Navbar() {
           id="sideBar"
           aria-labelledby="sideBarLabel"
         >
+          <div className="offcanvas-header">
+            <h5 className="offcanvas-title" id="offcanvasExampleLabel">
+              Offcanvas
+            </h5>
+            <button
+              type="button"
+              className="btn-close"
+              data-bs-dismiss="offcanvas"
+              aria-label="Close"
+            ></button>
+          </div>
           <div className="offcanvas-body ps-4 pe-4 py-4">
             <ul className="d-grid gap-3 ps-2">
               <li>
-                <Link to="/" className="fs-xs fw-bold">
+                <Link to="/" className="fs-xs fw-bold" id="home">
                   Home Page
                 </Link>
               </li>

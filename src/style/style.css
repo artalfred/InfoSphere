@@ -198,6 +198,15 @@ ion-icon {
   .sidebar-menu {
     width: 90% !important;
   }
+
+  .offcanvas,
+  .offcanvas-lg,
+  .offcanvas-md,
+  .offcanvas-sm,
+  .offcanvas-xl,
+  .offcanvas-xxl {
+    width: 12rem !important;
+  }
 }
 
 @media (max-width: 375.98px) {
