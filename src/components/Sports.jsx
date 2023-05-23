@@ -1,9 +1,14 @@
 import React from "react";
-import sports from "../img/cover/sports.png";
+import { useEffect } from "react";
+
 import Cards from "./resusable/Cards";
 import TitlePage from "./resusable/TitlePage";
 
 export default function Sports({ Sports }) {
+  useEffect(() => {
+    window.scrollTo(0, 0);
+  });
+
   return (
     <div className="">
       <div className="container-xxl p-2">

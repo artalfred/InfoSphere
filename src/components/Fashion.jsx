@@ -1,9 +1,14 @@
 import React from "react";
-import fashion from "../img/cover/fashion.png";
 import Cards from "./resusable/Cards";
 import TitlePage from "./resusable/TitlePage";
 
+import { useEffect } from "react";
+
 export default function Fashion({ Fashion }) {
+  useEffect(() => {
+    window.scrollTo(0, 0);
+  });
+
   return (
     <div className="">
       <div className="container-xxl p-2">

@@ -7,6 +7,10 @@ import TitlePage from "./resusable/TitlePage";
 import Cards from "./resusable/Cards";
 
 export default function Main({ home, world }) {
+  useEffect(() => {
+    window.scrollTo(0, 0);
+  });
+
   return (
     <div className="container-xxl p-2">
       <TitlePage

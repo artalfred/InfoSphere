@@ -3,7 +3,13 @@ import politics from "../img/cover/politics.png";
 import Cards from "./resusable/Cards";
 import TitlePage from "./resusable/TitlePage";
 
+import { useEffect } from "react";
+
 export default function Politics({ Politics }) {
+  useEffect(() => {
+    window.scrollTo(0, 0);
+  });
+
   return (
     <div className="">
       <div className="position-relative">
