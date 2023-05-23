@@ -42,6 +42,81 @@ export default function Navbar() {
             </p>
           </div>
         </div>
+
+        {/* SIDEBAR */}
+        <div
+          className="offcanvas offcanvas-start sideBar"
+          tabIndex="-1"
+          id="sideBar"
+          aria-labelledby="sideBarLabel"
+        >
+          <div className="offcanvas-body ps-4 pe-4 py-4">
+            <ul className="d-grid gap-3 ps-2">
+              <li>
+                <Link to="/" className="fs-xs fw-bold">
+                  Home Page
+                </Link>
+              </li>
+              <li>
+                <Link to="/world" className="fs-xs fw-bold">
+                  World
+                </Link>
+              </li>
+              <li>
+                <Link to="/politics" className="fs-xs fw-bold">
+                  Politics
+                </Link>
+              </li>
+              <li>
+                <Link to="/sports" className="fs-xs fw-bold">
+                  Sports
+                </Link>
+              </li>
+              <li>
+                <Link to="/science" className="fs-xs fw-bold">
+                  Science
+                </Link>
+              </li>
+              <li>
+                <Link to="/fashion" className="fs-xs fw-bold">
+                  Fashion
+                </Link>
+              </li>
+              <hr />
+              <li>
+                <Link to="" className="fs-xs fw-bold">
+                  Arts
+                </Link>
+              </li>
+              <li>
+                <Link to="" className="fs-xs fw-bold">
+                  Book Review
+                </Link>
+              </li>
+              <li>
+                <Link to="" className="fs-xs fw-bold">
+                  Food
+                </Link>
+              </li>
+              <li>
+                <Link to="" className="fs-xs fw-bold">
+                  Travel
+                </Link>
+              </li>
+              <li>
+                <Link to="" className="fs-xs fw-bold">
+                  Magazine
+                </Link>
+              </li>
+              <li>
+                <Link to="" className="fs-xs fw-bold">
+                  Entertainment
+                </Link>
+              </li>
+            </ul>
+          </div>
+        </div>
+
         <nav
           className="d-flex justify-content-between align-items-center container-xxl position-relative border-bottom"
           style={{ height: "6rem" }}
@@ -49,7 +124,13 @@ export default function Navbar() {
         >
           <div className="d-flex align-items-center gap-5">
             <div>
-              <button className="icon-btn d-flex justify-content-center align-items-center">
+              <button
+                className="icon-btn d-flex justify-content-center align-items-center"
+                data-bs-toggle="offcanvas"
+                href="#sideBar"
+                role="button"
+                aria-controls="sideBar"
+              >
                 <span className="icons d-flex align-items-center">
                   <ion-icon name="menu-outline"></ion-icon>
                 </span>
@@ -160,7 +241,13 @@ export default function Navbar() {
           <div className="container-xxl align-items-center justify-content-between d-flex gap-3">
             <div className="d-flex align-items-center gap-5">
               <div>
-                <button className="icon-btn d-flex justify-content-center align-items-center">
+                <button
+                  className="icon-btn d-flex justify-content-center align-items-center"
+                  data-bs-toggle="offcanvas"
+                  href="#sideBar"
+                  role="button"
+                  aria-controls="sideBar"
+                >
                   <span className="icons d-flex align-items-center">
                     <ion-icon name="menu-outline"></ion-icon>
                   </span>

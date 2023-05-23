@@ -77,6 +77,10 @@ input {
   transition: top 0.3s;
 }
 
+.f-xxs {
+  font-size: 12px;
+}
+
 .f-xs {
   font-size: 14px;
 }

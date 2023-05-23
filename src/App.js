@@ -1,5 +1,6 @@
 import React, { useState, useEffect } from "react";
-import { BrowserRouter, Routes, Route } from "react-router-dom";
+import { BrowserRouter as Router, Routes, Route } from "react-router-dom";
+import ScrollToTop from "react-scroll-to-top";
 
 import Main from "./components/Home";
 import Footer from "./components/Footer";
@@ -91,7 +92,7 @@ function App() {
   };
 
   return (
-    <BrowserRouter basename="/AccuDaily">
+    <Router basename="/AccuDaily">
       <div className="App">
         <Navbar />
         <Routes>
@@ -106,7 +107,7 @@ function App() {
         </Routes>
         <Footer />
       </div>
-    </BrowserRouter>
+    </Router>
   );
 }
 

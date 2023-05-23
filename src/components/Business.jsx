@@ -14,9 +14,25 @@ export default function Business({ Business }) {
         </div>
       </div>
 
-      <div className="container-xxl p-2" style={{ marginTop: "4rem" }}>
+      <div className="container-xxl p-2">
+        <div
+          className="d-flex align-items-center mt-5"
+          style={{ borderBottom: "1px solid #555" }}
+        >
+          <h1 className="display-6 pe-4" style={{ fontWeight: "900" }}>
+            Business
+          </h1>
+          <div className="scroll">
+            <span className="border-end pe-4 f-sm fs-3 fw-light">U.S</span>
+            <span className="border-end px-4 f-sm fs-3 fw-light">Tech</span>
+            <span className="border-end px-4 f-sm fs-3 fw-light">Econ</span>
+            <span className="border-end px-4 f-sm fs-3 fw-light">Media</span>
+            <span className="border-end px-4 f-sm fs-3 fw-light">Money</span>
+            <span className="border-end px-4 f-sm fs-3 fw-light">DealBook</span>
+          </div>
+        </div>
         {/* SECTION 1 */}
-        <div className="row gx-5" style={{ height: "auto" }}>
+        <div className="row gx-5 mt-4" style={{ height: "auto" }}>
           <div className="col-xs-12 col-md-12 col-lg-9 d-flex gap-4 order-1 order-md-1 order-lg-1">
             <div>
               <div className="border-bottom d-flex gap-4 pb-3">

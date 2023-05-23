@@ -1,6 +1,7 @@
 import React from "react";
 import politics from "../img/cover/politics.png";
 import Cards from "./resusable/Cards";
+import TitlePage from "./resusable/TitlePage";
 
 export default function Politics({ Politics }) {
   return (
@@ -14,9 +15,16 @@ export default function Politics({ Politics }) {
         </div>
       </div>
 
-      <div className="container-xxl p-2" style={{ marginTop: "4rem" }}>
+      <div className="container-xxl p-2">
+        <TitlePage
+          title="Politics"
+          country_1="U.S"
+          country_2="ASIA"
+          country_3="WORLD"
+          country_4="EUROPE"
+        />
         {/* SECTION 1 */}
-        <div className="row gx-5" style={{ height: "auto" }}>
+        <div className="row gx-5 mt-4" style={{ height: "auto" }}>
           <div className="col-xs-12 col-md-12 col-lg-9 d-flex gap-4 order-1 order-md-1 order-lg-1">
             <div>
               <div className="border-bottom d-flex gap-4 pb-3">

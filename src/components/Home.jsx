@@ -2,14 +2,22 @@ import React, { useEffect, useState } from "react";
 
 import "../style/home.css";
 import "../style/style.css";
+import TitlePage from "./resusable/TitlePage";
 
 import Cards from "./resusable/Cards";
 
 export default function Main({ home, world }) {
   return (
-    <div className="container-xxl p-2" style={{ marginTop: "4rem" }}>
+    <div className="container-xxl p-2">
+      <TitlePage
+        title="Worlds"
+        country_1="U.S"
+        country_2="ASIA"
+        country_3="EUROPE"
+        country_4="CANADA"
+      />
       {/* SECTION 1 */}
-      <div className="row gx-5" style={{ height: "auto" }}>
+      <div className="row gx-5 mt-4" style={{ height: "auto" }}>
         <div className="col-xs-12 col-md-12 col-lg-9 d-flex gap-4 order-1 order-md-1 order-lg-1">
           <div>
             <div className="border-bottom d-flex gap-4 pb-3">
@@ -145,11 +153,16 @@ export default function Main({ home, world }) {
                     <div key={index}>
                       <a href={item.url}>
                         <div className="card">
-                          <img
-                            src={item.multimedia?.[0]?.url || "Hello"}
-                            className="img-fluid"
-                            alt="..."
-                          />
+                          <div
+                            className="news_img_adjust overflow-hidden"
+                            style={{ maxHeight: "26rem" }}
+                          >
+                            <img
+                              src={item.multimedia?.[0]?.url || "Hello"}
+                              className="img-fluid"
+                              alt="..."
+                            />
+                          </div>
                           <div className="card-body mt-3">
                             <h2 className="fw-bold body-text">{item.title}</h2>
                             <p className="text-secondary body-text lh-base p-0">

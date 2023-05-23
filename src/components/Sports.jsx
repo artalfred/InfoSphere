@@ -1,22 +1,21 @@
 import React from "react";
 import sports from "../img/cover/sports.png";
 import Cards from "./resusable/Cards";
+import TitlePage from "./resusable/TitlePage";
 
 export default function Sports({ Sports }) {
   return (
     <div className="">
-      <div className="position-relative">
-        <div
-          className="w-100 overflow-hidden cover_img"
-          style={{ height: "20rem" }}
-        >
-          <img src={sports} alt="politics-cover" style={{ height: "auto" }} />
-        </div>
-      </div>
-
-      <div className="container-xxl p-2" style={{ marginTop: "4rem" }}>
+      <div className="container-xxl p-2">
+        <TitlePage
+          title="Sports"
+          country_1="M.L.B"
+          country_2="N.F.L"
+          country_3="COLLEGE FOOTBALL"
+          country_4="BASKETBALL"
+        />
         {/* SECTION 1 */}
-        <div className="row gx-5" style={{ height: "auto" }}>
+        <div className="row gx-5 mt-4" style={{ height: "auto" }}>
           <div className="col-xs-12 col-md-12 col-lg-9 d-flex gap-4 order-1 order-md-1 order-lg-1">
             <div>
               <div className="border-bottom d-flex gap-4 pb-3">

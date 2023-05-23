@@ -7,6 +7,7 @@ import "../style/world.css";
 import Cards from "./resusable/Cards";
 import Articles from "./resusable/Articles";
 import Jumbutron from "./resusable/Jumbutron";
+import TitlePage from "./resusable/TitlePage";
 
 export default function World({ World }) {
   useEffect(() => {
@@ -25,7 +26,14 @@ export default function World({ World }) {
       </div>
 
       <div className="container-xxl">
-        <div className="row mt-5 gx-5 border-bottom">
+        <TitlePage
+          title="World News"
+          country_1="U.S"
+          country_2="ASIA"
+          country_3="EUROPE"
+          country_4="CANADA"
+        />
+        <div className="row mt-3 gx-5 border-bottom">
           {/* FIRST SIDE */}
           <div className="col-12 col-md-3 order-2 order-sm-2 order-md-1 order-lg-1">
             {World.slice(3, 8).map((item, index) => (

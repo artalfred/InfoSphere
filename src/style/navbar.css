@@ -35,3 +35,12 @@ img {
 .scroll::-webkit-scrollbar {
   display: none;
 }
+
+.offcanvas,
+.offcanvas-lg,
+.offcanvas-md,
+.offcanvas-sm,
+.offcanvas-xl,
+.offcanvas-xxl {
+  width: 14rem !important;
+}

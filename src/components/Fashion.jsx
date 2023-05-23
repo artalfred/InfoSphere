@@ -1,22 +1,21 @@
 import React from "react";
 import fashion from "../img/cover/fashion.png";
 import Cards from "./resusable/Cards";
+import TitlePage from "./resusable/TitlePage";
 
 export default function Fashion({ Fashion }) {
   return (
     <div className="">
-      <div className="position-relative">
-        <div
-          className="w-100 overflow-hidden cover_img"
-          style={{ height: "20rem" }}
-        >
-          <img src={fashion} alt="fashion-cover" style={{ height: "auto" }} />
-        </div>
-      </div>
-
-      <div className="container-xxl p-2" style={{ marginTop: "4rem" }}>
+      <div className="container-xxl p-2">
+        <TitlePage
+          title="Fashion"
+          country_1="MET GALA 2023"
+          country_2="VOGUE"
+          country_3="HARPER'S BAZAAR"
+          country_4="INSTYLE"
+        />
         {/* SECTION 1 */}
-        <div className="row gx-5" style={{ height: "auto" }}>
+        <div className="row gx-5 mt-4" style={{ height: "auto" }}>
           <div className="col-xs-12 col-md-12 col-lg-9 d-flex gap-4 order-1 order-md-1 order-lg-1">
             <div>
               <div className="border-bottom d-flex gap-4 pb-3">
