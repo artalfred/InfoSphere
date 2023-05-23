@@ -44,3 +44,33 @@ img {
 .offcanvas-xxl {
   width: 14rem !important;
 }
+
+@media (max-width: 425.98px) {
+  .offcanvas,
+  .offcanvas-lg,
+  .offcanvas-md,
+  .offcanvas-sm,
+  .offcanvas-xl,
+  .offcanvas-xxl {
+    width: 10rem !important;
+  }
+
+  .sidebar_sm {
+    padding-left: 0.4rem !important;
+  }
+}
+
+@media (max-width: 375.98px) {
+  .offcanvas,
+  .offcanvas-lg,
+  .offcanvas-md,
+  .offcanvas-sm,
+  .offcanvas-xl,
+  .offcanvas-xxl {
+    width: 9rem !important;
+  }
+
+  /* .sidebar_sm {
+    padding-left: 0.4rem !important;
+  } */
+}
