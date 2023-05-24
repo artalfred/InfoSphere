@@ -8,15 +8,6 @@ import { useEffect } from "react";
 export default function Politics({ Politics }) {
   return (
     <div className="">
-      <div className="position-relative">
-        <div
-          className="w-100 overflow-hidden cover_img"
-          style={{ height: "20rem" }}
-        >
-          <img src={politics} alt="politics-cover" style={{ height: "auto" }} />
-        </div>
-      </div>
-
       <div className="container-xxl p-2">
         <TitlePage
           title="Politics"

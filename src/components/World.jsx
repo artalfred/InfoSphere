@@ -12,15 +12,6 @@ import TitlePage from "./resusable/TitlePage";
 export default function World({ World }) {
   return (
     <div>
-      <div className="position-relative">
-        <div
-          className="w-100 overflow-hidden cover_img"
-          style={{ height: "20rem" }}
-        >
-          <img src={world} alt="World-cover" style={{ height: "auto" }} />
-        </div>
-      </div>
-
       <div className="container-xxl">
         <TitlePage
           title="World News"
