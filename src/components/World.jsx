@@ -10,10 +10,6 @@ import Jumbutron from "./resusable/Jumbutron";
 import TitlePage from "./resusable/TitlePage";
 
 export default function World({ World }) {
-  useEffect(() => {
-    window.scrollTo(0, 0);
-  });
-
   return (
     <div>
       <div className="position-relative">

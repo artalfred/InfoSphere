@@ -1,6 +1,5 @@
 import React, { useState, useEffect } from "react";
 import { BrowserRouter as Router, Routes, Route } from "react-router-dom";
-import ScrollToTop from "react-scroll-to-top";
 
 import Main from "./components/Home";
 import Footer from "./components/Footer";
@@ -12,6 +11,7 @@ import Business from "./components/Business";
 import Sports from "./components/Sports";
 import Science from "./components/Science";
 import Fashion from "./components/Fashion";
+import Scroll from "./components/resusable/Scroll";
 
 const urlApi = "https://api.nytimes.com/svc/topstories/v2";
 const apiKey = "wbvqsqGzDnecddBOkQqrtUTSnM08QqXS";
@@ -95,16 +95,18 @@ function App() {
     <Router basename="/AccuDaily">
       <div className="App">
         <Navbar />
-        <Routes>
-          <Route path="/" element={<Main home={data} world={data_2} />} />
-          <Route path="/home" element={<Main home={data} world={data_2} />} />
-          <Route path="/world" element={<World World={data_2} />} />
-          <Route path="/politics" element={<Politics Politics={data_3} />} />
-          <Route path="/business" element={<Business Business={data_4} />} />
-          <Route path="/sports" element={<Sports Sports={data_5} />} />
-          <Route path="/science" element={<Science Science={data_6} />} />
-          <Route path="/fashion" element={<Fashion Fashion={data_7} />} />
-        </Routes>
+        <Scroll>
+          <Routes>
+            <Route path="/" element={<Main home={data} world={data_2} />} />
+            <Route path="/home" element={<Main home={data} world={data_2} />} />
+            <Route path="/world" element={<World World={data_2} />} />
+            <Route path="/politics" element={<Politics Politics={data_3} />} />
+            <Route path="/business" element={<Business Business={data_4} />} />
+            <Route path="/sports" element={<Sports Sports={data_5} />} />
+            <Route path="/science" element={<Science Science={data_6} />} />
+            <Route path="/fashion" element={<Fashion Fashion={data_7} />} />
+          </Routes>
+        </Scroll>
         <Footer />
       </div>
     </Router>

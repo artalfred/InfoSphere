@@ -6,15 +6,17 @@ import { Link } from "react-router-dom";
 
 export default function Navbar() {
   const [activeItem, setActiveItem] = useState("");
+  const [show, setShow] = useState(false);
 
   useEffect(() => {
     const handleScroll = () => {
-      const threshold = document.documentElement.scrollHeight * 0.08;
+      const threshold = document.documentElement.scrollHeight * 0.04;
 
       if (window.scrollY > threshold) {
         const navbarShow = document.querySelector(".navbar_show");
         navbarShow.style.display = "block";
         navbarShow.style.marginTop = "0rem";
+        setShow(false);
       } else {
         const navbarShow = document.querySelector(".navbar_show");
         navbarShow.style.display = "none";
@@ -27,6 +29,10 @@ export default function Navbar() {
 
   const handleClick = (id) => {
     setActiveItem(id);
+  };
+
+  const hideNav = () => {
+    setShow(true);
   };
 
   return (
@@ -44,79 +50,82 @@ export default function Navbar() {
         </div>
 
         {/* SIDEBAR */}
-        <div
-          className="offcanvas offcanvas-start sideBar"
-          tabIndex="-1"
-          id="sideBar"
-          aria-labelledby="sideBarLabel"
-        >
-          <div className="offcanvas-body ps-4 pe-4 py-4 sidebar_sm">
-            <ul className="d-grid gap-3 ps-2">
-              <li>
-                <Link to="/" className="fs-xs fw-bold" id="home">
-                  Home Page
-                </Link>
-              </li>
-              <li>
-                <Link to="/world" className="fs-xs fw-bold">
-                  World
-                </Link>
-              </li>
-              <li>
-                <Link to="/politics" className="fs-xs fw-bold">
-                  Politics
-                </Link>
-              </li>
-              <li>
-                <Link to="/sports" className="fs-xs fw-bold">
-                  Sports
-                </Link>
-              </li>
-              <li>
-                <Link to="/science" className="fs-xs fw-bold">
-                  Science
-                </Link>
-              </li>
-              <li>
-                <Link to="/fashion" className="fs-xs fw-bold">
-                  Fashion
-                </Link>
-              </li>
-              <hr />
-              <li>
-                <Link to="" className="fs-xs fw-bold">
-                  Arts
-                </Link>
-              </li>
-              <li>
-                <Link to="" className="fs-xs fw-bold">
-                  Book Review
-                </Link>
-              </li>
-              <li>
-                <Link to="" className="fs-xs fw-bold">
-                  Food
-                </Link>
-              </li>
-              <li>
-                <Link to="" className="fs-xs fw-bold">
-                  Travel
-                </Link>
-              </li>
-              <li>
-                <Link to="" className="fs-xs fw-bold">
-                  Magazine
-                </Link>
-              </li>
-              <li>
-                <Link to="" className="fs-xs fw-bold">
-                  Entertainment
-                </Link>
-              </li>
-            </ul>
+        {show && (
+          <div className="sideBar pt-4 fixed-top border-end">
+            <span
+              className="ps-4"
+              style={{ cursor: "pointer" }}
+              onClick={() => setShow(false)}
+            >
+              <ion-icon name="close-sharp"></ion-icon>
+            </span>
+            <div className="offcanvas-body ps-4 pe-4 py-4 sidebar_sm">
+              <ul className="d-grid gap-3 ps-2">
+                <li onClick={() => setShow(false)}>
+                  <Link to="/" className="fs-xs fw-normal" id="home">
+                    Home Page
+                  </Link>
+                </li>
+                <li onClick={() => setShow(false)}>
+                  <Link to="/world" className="fs-xs fw-normal">
+                    World
+                  </Link>
+                </li>
+                <li onClick={() => setShow(false)}>
+                  <Link to="/politics" className="fs-xs fw-normal">
+                    Politics
+                  </Link>
+                </li>
+                <li onClick={() => setShow(false)}>
+                  <Link to="/sports" className="fs-xs fw-normal">
+                    Sports
+                  </Link>
+                </li>
+                <li onClick={() => setShow(false)}>
+                  <Link to="/science" className="fs-xs fw-normal">
+                    Science
+                  </Link>
+                </li>
+                <li onClick={() => setShow(false)}>
+                  <Link to="/fashion" className="fs-xs fw-normal">
+                    Fashion
+                  </Link>
+                </li>
+                <hr />
+                <li onClick={() => setShow(false)}>
+                  <Link to="" className="fs-xs fw-normal">
+                    Arts
+                  </Link>
+                </li>
+                <li onClick={() => setShow(false)}>
+                  <Link to="" className="fs-xs fw-normal">
+                    Book Review
+                  </Link>
+                </li>
+                <li onClick={() => setShow(false)}>
+                  <Link to="" className="fs-xs fw-normal">
+                    Food
+                  </Link>
+                </li>
+                <li onClick={() => setShow(false)}>
+                  <Link to="" className="fs-xs fw-normal">
+                    Travel
+                  </Link>
+                </li>
+                <li onClick={() => setShow(false)}>
+                  <Link to="" className="fs-xs fw-normal">
+                    Magazine
+                  </Link>
+                </li>
+                <li onClick={() => setShow(false)}>
+                  <Link to="" className="fs-xs fw-normal">
+                    Entertainment
+                  </Link>
+                </li>
+              </ul>
+            </div>
           </div>
-        </div>
-
+        )}
         <nav
           className="d-flex justify-content-between align-items-center container-xxl position-relative border-bottom"
           style={{ height: "6rem" }}
@@ -126,10 +135,8 @@ export default function Navbar() {
             <div>
               <button
                 className="icon-btn d-flex justify-content-center align-items-center"
-                data-bs-toggle="offcanvas"
-                href="#sideBar"
-                role="button"
-                aria-controls="sideBar"
+                id="menu"
+                onClick={hideNav}
               >
                 <span className="icons d-flex align-items-center">
                   <ion-icon name="menu-outline"></ion-icon>
@@ -243,10 +250,7 @@ export default function Navbar() {
               <div>
                 <button
                   className="icon-btn d-flex justify-content-center align-items-center"
-                  data-bs-toggle="offcanvas"
-                  href="#sideBar"
-                  role="button"
-                  aria-controls="sideBar"
+                  onClick={hideNav}
                 >
                   <span className="icons d-flex align-items-center">
                     <ion-icon name="menu-outline"></ion-icon>

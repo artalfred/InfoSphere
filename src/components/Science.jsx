@@ -4,10 +4,6 @@ import Cards from "./resusable/Cards";
 import TitlePage from "./resusable/TitlePage";
 
 export default function Science({ Science }) {
-  useEffect(() => {
-    window.scrollTo(0, 0);
-  });
-
   return (
     <div className="">
       <div className="container-xxl p-2">

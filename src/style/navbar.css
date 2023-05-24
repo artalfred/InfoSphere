@@ -7,6 +7,7 @@
   transition: all 0.6s ease;
   background: #fff;
   margin-top: -3rem;
+  z-index: 2;
 }
 
 .fs-xxs {
@@ -36,22 +37,14 @@ img {
   display: none;
 }
 
-.offcanvas,
-.offcanvas-lg,
-.offcanvas-md,
-.offcanvas-sm,
-.offcanvas-xl,
-.offcanvas-xxl {
-  width: 14rem !important;
+.sideBar {
+  width: 14rem;
+  height: 100vh;
+  background: #fff;
 }
 
 @media (max-width: 425.98px) {
-  .offcanvas,
-  .offcanvas-lg,
-  .offcanvas-md,
-  .offcanvas-sm,
-  .offcanvas-xl,
-  .offcanvas-xxl {
+  .sideBar {
     width: 10rem !important;
   }
 
@@ -61,16 +54,11 @@ img {
 }
 
 @media (max-width: 375.98px) {
-  .offcanvas,
-  .offcanvas-lg,
-  .offcanvas-md,
-  .offcanvas-sm,
-  .offcanvas-xl,
-  .offcanvas-xxl {
+  .sideBar {
     width: 9rem !important;
   }
 
-  /* .sidebar_sm {
+  .sidebar_sm {
     padding-left: 0.4rem !important;
-  } */
+  }
 }

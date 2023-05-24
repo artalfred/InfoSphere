@@ -4,10 +4,6 @@ import Cards from "./resusable/Cards";
 import { useEffect } from "react";
 
 export default function Business({ Business }) {
-  useEffect(() => {
-    window.scrollTo(0, 0);
-  });
-
   return (
     <div className="">
       <div className="position-relative">
