@@ -51,6 +51,10 @@ img {
   .sidebar_sm {
     padding-left: 0.4rem !important;
   }
+
+  .close {
+    padding-left: 0.5rem !important;
+  }
 }
 
 @media (max-width: 375.98px) {

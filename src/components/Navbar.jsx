@@ -53,7 +53,7 @@ export default function Navbar() {
         {show && (
           <div className="sideBar pt-4 fixed-top border-end">
             <span
-              className="ps-4"
+              className="ps-4 close"
               style={{ cursor: "pointer" }}
               onClick={() => setShow(false)}
             >
