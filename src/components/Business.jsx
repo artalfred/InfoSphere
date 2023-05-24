@@ -1,5 +1,4 @@
 import React from "react";
-import business from "../img/cover/business.png";
 import Cards from "./resusable/Cards";
 import { useEffect } from "react";
 

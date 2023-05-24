@@ -1,7 +1,5 @@
 import React, { useEffect } from "react";
 
-import world from "../img/cover/world.png";
-
 import "../style/style.css";
 import "../style/world.css";
 import Cards from "./resusable/Cards";

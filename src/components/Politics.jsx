@@ -1,5 +1,4 @@
 import React from "react";
-import politics from "../img/cover/politics.png";
 import Cards from "./resusable/Cards";
 import TitlePage from "./resusable/TitlePage";
 
