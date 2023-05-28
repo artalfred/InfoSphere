@@ -2,8 +2,6 @@ import React from "react";
 import Cards from "./resusable/Cards";
 import TitlePage from "./resusable/TitlePage";
 
-import { useEffect } from "react";
-
 export default function Politics({ Politics }) {
   return (
     <div className="">

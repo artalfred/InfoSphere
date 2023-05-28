@@ -226,7 +226,7 @@ export default function Main({ home, world }) {
               </a>
             </div>
           ))}
-          {world.slice(12, 21).map((item, index) => (
+          {world.slice(12, 20).map((item, index) => (
             <div key={index}>
               <a href={item.url}>
                 <div className="card ">
