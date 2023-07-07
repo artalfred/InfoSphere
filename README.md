@@ -1,70 +1,14 @@
-# Getting Started with Create React App
+Welcome to AccuDaily, your go-to news website for the latest updates and insightful articles. Powered by the New York Times API, AccuDaily delivers a comprehensive range of news content, informing you about global events, politics, business, technology, entertainment, and more. Immerse yourself in a world of journalism excellence as we bring you up-to-date news stories from around the globe. With a clean and intuitive interface, AccuDaily ensures an engaging and seamless reading experience for avid news enthusiasts like you.
 
-This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
+Features:
 
-## Available Scripts
+1. Latest Articles: Stay informed with the most recent news articles from the New York Times, providing you with up-to-the-minute coverage of breaking stories and current events.
+2. Comprehensive News Categories: Explore a wide range of news categories, including politics, business, technology, entertainment, sports, and more, to dive deep into the topics that interest you.
+3. User-Friendly Interface: Enjoy a clean and intuitive interface that enhances readability and provides a seamless navigation experience, allowing you to focus on the news that matters most.
 
-In the project directory, you can run:
+Still, work-in-progress features
+4. Search Functionality: Easily search for specific news topics, articles, or keywords to find relevant information quickly and efficiently.
+5. Personalized Reading Experience: Customize your news preferences, save articles for later, and create personalized reading lists to tailor the news content to your interests.
+6. Sharing and Social Integration: Share articles with friends and family via social media platforms, promoting meaningful discussions and engaging with others.
 
-### `npm start`
-
-Runs the app in the development mode.\
-Open [http://localhost:3000](http://localhost:3000) to view it in your browser.
-
-The page will reload when you make changes.\
-You may also see any lint errors in the console.
-
-### `npm test`
-
-Launches the test runner in the interactive watch mode.\
-See the section about [running tests](https://facebook.github.io/create-react-app/docs/running-tests) for more information.
-
-### `npm run build`
-
-Builds the app for production to the `build` folder.\
-It correctly bundles React in production mode and optimizes the build for the best performance.
-
-The build is minified and the filenames include the hashes.\
-Your app is ready to be deployed!
-
-See the section about [deployment](https://facebook.github.io/create-react-app/docs/deployment) for more information.
-
-### `npm run eject`
-
-**Note: this is a one-way operation. Once you `eject`, you can't go back!**
-
-If you aren't satisfied with the build tool and configuration choices, you can `eject` at any time. This command will remove the single build dependency from your project.
-
-Instead, it will copy all the configuration files and the transitive dependencies (webpack, Babel, ESLint, etc) right into your project so you have full control over them. All of the commands except `eject` will still work, but they will point to the copied scripts so you can tweak them. At this point you're on your own.
-
-You don't have to ever use `eject`. The curated feature set is suitable for small and middle deployments, and you shouldn't feel obligated to use this feature. However we understand that this tool wouldn't be useful if you couldn't customize it when you are ready for it.
-
-## Learn More
-
-You can learn more in the [Create React App documentation](https://facebook.github.io/create-react-app/docs/getting-started).
-
-To learn React, check out the [React documentation](https://reactjs.org/).
-
-### Code Splitting
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/code-splitting](https://facebook.github.io/create-react-app/docs/code-splitting)
-
-### Analyzing the Bundle Size
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/analyzing-the-bundle-size](https://facebook.github.io/create-react-app/docs/analyzing-the-bundle-size)
-
-### Making a Progressive Web App
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/making-a-progressive-web-app](https://facebook.github.io/create-react-app/docs/making-a-progressive-web-app)
-
-### Advanced Configuration
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/advanced-configuration](https://facebook.github.io/create-react-app/docs/advanced-configuration)
-
-### Deployment
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/deployment](https://facebook.github.io/create-react-app/docs/deployment)
-
-### `npm run build` fails to minify
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/troubleshooting#npm-run-build-fails-to-minify](https://facebook.github.io/create-react-app/docs/troubleshooting#npm-run-build-fails-to-minify)
+AccuDaily strives to be your trusted source of news, delivering accurate, timely, and engaging content that keeps you informed and connected to the world.
