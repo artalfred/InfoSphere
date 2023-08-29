@@ -2,12 +2,32 @@
   transition: all 0.3s ease;
 }
 
+.active {
+  color: #e25720 !important;
+  font-weight: 500;
+}
+
 .navbar_show {
   display: none;
   transition: all 0.6s ease;
   background: #fff;
   margin-top: -3rem;
   z-index: 2;
+}
+
+.navigation {
+  animation: navs 0.4s forwards;
+  background-color: #fff;
+}
+
+@keyframes navs {
+  from {
+    top: -2rem;
+  }
+
+  to {
+    top: 0;
+  }
 }
 
 .fs-xxs {
