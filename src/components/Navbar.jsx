@@ -50,7 +50,7 @@ export default function Navbar() {
           </div>
 
           <div className="position-absolute top-50 start-50 translate-middle">
-            <Link to="/home" className="fs-2 fw-bold logo text-dark">
+            <Link to="/" className="fs-2 fw-bold logo text-dark">
               <img src={logo} alt="logo" />
             </Link>
           </div>
