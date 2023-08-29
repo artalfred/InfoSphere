@@ -71,25 +71,25 @@ export default function Navbar() {
         >
           <div className="container-xxl">
             <div className="d-flex justify-content-start align-items-center gap-5 scroll py-2">
-              <NavLink to="/">
+              <NavLink reloadDocument to="/">
                 <p className="f-xs pb-0 ">Home</p>
               </NavLink>
-              <NavLink to="/world">
+              <NavLink reloadDocument to="/world">
                 <p className="f-xs pb-0 ">World</p>
               </NavLink>
-              <NavLink to="/politics">
+              <NavLink reloadDocument to="/politics">
                 <p className="f-xs pb-0 ">Politics</p>
               </NavLink>
-              <NavLink to="/business">
+              <NavLink reloadDocument to="/business">
                 <p className="f-xs pb-0">Business</p>
               </NavLink>
-              <NavLink to="/sports">
+              <NavLink reloadDocument to="/sports">
                 <p className="f-xs pb-0">Sports</p>
               </NavLink>
-              <NavLink to="/science">
+              <NavLink reloadDocument to="/science">
                 <p className="f-xs pb-0">Science</p>
               </NavLink>
-              <NavLink to="/fashion">
+              <NavLink reloadDocument to="/fashion">
                 <p className="f-xs pb-0">Fashion</p>
               </NavLink>
             </div>
