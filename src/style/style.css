@@ -29,6 +29,19 @@ nav {
   font-family: Bodytext !important;
 }
 
+.title {
+  font-family: Bodytext !important;
+  font-weight: 700;
+}
+
+.sub-title {
+  color: #555;
+}
+
+.section {
+  color: #e25720;
+}
+
 a {
   text-decoration: none !important;
   color: #590d22 !important;
@@ -145,11 +158,15 @@ ion-icon {
   .log_account {
     display: none !important;
   }
+
+  .logo img {
+    height: 3.4rem;
+  }
 }
 
 @media (max-width: 575.98px) {
   .logo img {
-    height: 2rem;
+    height: 2.6rem;
   }
 
   .subscribe {
@@ -192,7 +209,7 @@ ion-icon {
   }
 
   .logo img {
-    height: 1.6rem;
+    height: 2rem;
   }
 
   .sidebar-menu {

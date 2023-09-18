@@ -3,6 +3,7 @@ import "../style/style.css";
 import logo from "../img/icon/logo.png";
 import { Link, NavLink } from "react-router-dom";
 import { useState } from "react";
+import Search from "./resusable/Search";
 
 export default function Navbar() {
   const [isHide, setIsHide] = useState(false);
@@ -35,11 +36,11 @@ export default function Navbar() {
         </div>
 
         <nav
-          className="d-flex justify-content-between align-items-center container-xxl position-relative"
+          className="d-flex justify-content-between align-items-center container-xxl position-relative navbar-menu"
           style={{ height: "6rem" }}
           id="navbar"
         >
-          <div className="d-flex align-items-center gap-5">
+          <div className="align-items-center gap-5 menu">
             <div>
               <button className="icon-btn d-flex justify-content-center align-items-center">
                 <span className="icons d-flex align-items-center">
@@ -49,19 +50,14 @@ export default function Navbar() {
             </div>
           </div>
 
-          <div className="position-absolute top-50 start-50 translate-middle">
-            <Link to="/" className="fs-2 fw-bold logo text-dark">
+          <div className="position-absolute top-50 start-50 translate-middle navbar-menu-logo">
+            <Link to="/AccuDaily" className="fs-2 fw-bold logo text-dark">
               <img src={logo} alt="logo" />
             </Link>
           </div>
 
-          <div className="d-flex gap-3 align-items-center log_account">
-            <Link to="#" className="fs-xs">
-              Login
-            </Link>
-            <Link to="#" className="fs-xs">
-              Sign up
-            </Link>
+          <div className="d-flex align-items-center justify-content-end search">
+            <Search />
           </div>
         </nav>
 
@@ -71,7 +67,7 @@ export default function Navbar() {
         >
           <div className="container-xxl">
             <div className="d-flex justify-content-start align-items-center gap-5 scroll py-2">
-              <NavLink reloadDocument to="/">
+              <NavLink reloadDocument to="/AccuDaily">
                 <p className="f-xs pb-0 ">Home</p>
               </NavLink>
               <NavLink reloadDocument to="/world">
@@ -86,11 +82,11 @@ export default function Navbar() {
               <NavLink reloadDocument to="/sports">
                 <p className="f-xs pb-0">Sports</p>
               </NavLink>
-              <NavLink reloadDocument to="/science">
-                <p className="f-xs pb-0">Science</p>
+              <NavLink reloadDocument to="/arts">
+                <p className="f-xs pb-0">Arts</p>
               </NavLink>
-              <NavLink reloadDocument to="/fashion">
-                <p className="f-xs pb-0">Fashion</p>
+              <NavLink reloadDocument to="/magazine">
+                <p className="f-xs pb-0">Magazine</p>
               </NavLink>
             </div>
           </div>
@@ -105,7 +101,7 @@ export default function Navbar() {
       >
         <div className="container-xxl">
           <div className="d-flex justify-content-center align-items-center gap-5 scroll py-2">
-            <NavLink reloadDocument to="/">
+            <NavLink reloadDocument to="/AccuDaily">
               <p className="f-xs pb-0 ">Home</p>
             </NavLink>
             <NavLink reloadDocument to="/world">
@@ -120,8 +116,8 @@ export default function Navbar() {
             <NavLink reloadDocument to="/sports">
               <p className="f-xs pb-0">Sports</p>
             </NavLink>
-            <NavLink reloadDocument to="/science">
-              <p className="f-xs pb-0">Science</p>
+            <NavLink reloadDocument to="/arts">
+              <p className="f-xs pb-0">Arts</p>
             </NavLink>
             <NavLink reloadDocument to="/fashion">
               <p className="f-xs pb-0">Fashion</p>

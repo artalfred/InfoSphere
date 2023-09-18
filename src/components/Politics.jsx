@@ -3,8 +3,10 @@ import TitlePage from "./resusable/TitlePage";
 import IsLoading from "./resusable/IsLoading";
 import Pages from "./resusable/Pages";
 import Error from "./resusable/Error";
+import { useApi } from "./Functionality/ApiContext";
 
-export default function Politics({ Politics, isLoading, error }) {
+export default function Politics() {
+  const { politics, isLoading, error } = useApi();
   return (
     <div>
       <div className="container-xxl p-2">
@@ -25,7 +27,7 @@ export default function Politics({ Politics, isLoading, error }) {
                 />
 
                 <div className="row gx-5 mt-4" style={{ height: "auto" }}>
-                  <Pages API={Politics} />
+                  <Pages API={politics} politics={politics} />
                 </div>
               </>
             )}

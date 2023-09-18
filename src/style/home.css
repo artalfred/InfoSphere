@@ -13,8 +13,31 @@
   height: 12rem;
 }
 
+.hm-Artcle-Pg {
+  padding-left: 12rem;
+  padding-right: 12rem;
+}
+
+@media (max-width: 1400px) {
+  .hm-Artcle-Pg {
+    padding-left: 4rem;
+    padding-right: 4rem;
+  }
+}
+
+@media (max-width: 1200px) {
+  .hm-Artcle-Pg {
+    padding-left: 2rem;
+    padding-right: 2rem;
+  }
+}
+
 @media (max-width: 767.98px) {
   .img_size_sm {
     height: auto;
+  }
+
+  .date {
+    margin-top: 1rem !important;
   }
 }

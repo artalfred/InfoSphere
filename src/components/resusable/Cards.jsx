@@ -1,8 +1,17 @@
 import React from "react";
+import { Link } from "react-router-dom";
 
-export default function Cards({ img, title, abstract, byline, url }) {
+export default function Cards({
+  img,
+  title,
+  abstract,
+  byline,
+  category,
+  id,
+  item,
+}) {
   return (
-    <a href={url}>
+    <Link reloadDocument to={`/AccuDaily/${category}/${id}/${item}`}>
       <div className="card">
         <img src={img} className="img-fluid img_size_sm" alt="..." />
         <div className="card-body mt-3">
@@ -13,6 +22,6 @@ export default function Cards({ img, title, abstract, byline, url }) {
           </p>
         </div>
       </div>
-    </a>
+    </Link>
   );
 }

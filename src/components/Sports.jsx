@@ -2,8 +2,11 @@ import TitlePage from "./resusable/TitlePage";
 import IsLoading from "./resusable/IsLoading";
 import Pages from "./resusable/Pages";
 import Error from "./resusable/Error";
+import { useApi } from "./Functionality/ApiContext";
 
-export default function Sports({ Sports, isLoading, error }) {
+export default function Sports() {
+  const { sports, isLoading, error } = useApi();
+
   return (
     <div>
       <div className="container-xxl p-2">
@@ -24,7 +27,7 @@ export default function Sports({ Sports, isLoading, error }) {
                 />
                 {/* SECTION 1 */}
                 <div className="row gx-5 mt-4" style={{ height: "auto" }}>
-                  <Pages API={Sports} />
+                  <Pages API={sports} sports={sports} />
                 </div>
               </>
             )}

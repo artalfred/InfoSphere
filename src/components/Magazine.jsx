@@ -3,8 +3,11 @@ import TitlePage from "./resusable/TitlePage";
 import { Circles } from "react-loader-spinner";
 import Pages from "./resusable/Pages";
 import Error from "./resusable/Error";
+import { useApi } from "./Functionality/ApiContext";
 
-export default function Fashion({ Fashion, isLoading, error }) {
+export default function Magazine() {
+  const { magazine, isLoading, error } = useApi();
+
   return (
     <div>
       <div className="container-xxl p-2">
@@ -27,7 +30,7 @@ export default function Fashion({ Fashion, isLoading, error }) {
             ) : (
               <>
                 <TitlePage
-                  title="Fashion"
+                  title="Magazine"
                   country_1="MET GALA 2023"
                   country_2="VOGUE"
                   country_3="HARPER'S BAZAAR"
@@ -35,7 +38,7 @@ export default function Fashion({ Fashion, isLoading, error }) {
                 />
                 {/* SECTION 1 */}
                 <div className="row gx-5 mt-4" style={{ height: "auto" }}>
-                  <Pages API={Fashion} />
+                  <Pages API={magazine} />
                 </div>
               </>
             )}

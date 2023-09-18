@@ -5,8 +5,11 @@ import TitlePage from "./resusable/TitlePage";
 import IsLoading from "./resusable/IsLoading";
 import Pages from "./resusable/Pages";
 import Error from "./resusable/Error";
+import { useApi } from "./Functionality/ApiContext";
 
-export default function Main({ home, world, isLoading, error }) {
+export default function Home() {
+  const { home, isLoading, error } = useApi();
+
   return (
     <div className="container-xxl p-2">
       {error ? (
@@ -26,9 +29,8 @@ export default function Main({ home, world, isLoading, error }) {
               />
 
               {/* PAGES */}
-
               <div className="row gx-5 mt-4" style={{ height: "auto" }}>
-                <Pages API={home} WORLD_API={world} />
+                <Pages API={home} />
               </div>
             </>
           )}
