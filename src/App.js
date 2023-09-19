@@ -1,4 +1,3 @@
-import React, { useState } from "react";
 import { BrowserRouter as Router, Routes, Route } from "react-router-dom";
 
 import Footer from "./components/Footer";
@@ -13,7 +12,7 @@ import { CategoryProvider } from "./components/Functionality/CategoryContext";
 import Error from "./components/resusable/Error";
 import SearchPage from "./components/SearchPage";
 import SearchPageArticle from "./components/resusable/SearchPageArticle";
-import { ApiProvider, useApi } from "./components/Functionality/ApiContext";
+import { ApiProvider } from "./components/Functionality/ApiContext";
 import Arts from "./components/Arts";
 import Magazine from "./components/Magazine";
 

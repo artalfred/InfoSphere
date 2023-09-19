@@ -6,9 +6,6 @@ Features:
 2. Comprehensive News Categories: Explore a wide range of news categories, including politics, business, technology, entertainment, sports, and more, to dive deep into the topics that interest you.
 3. User-Friendly Interface: Enjoy a clean and intuitive interface that enhances readability and provides a seamless navigation experience, allowing you to focus on the news that matters most.
 
-Still, work-in-progress features
-4. Search Functionality: Easily search for specific news topics, articles, or keywords to find relevant information quickly and efficiently.
-5. Personalized Reading Experience: Customize your news preferences, save articles for later, and create personalized reading lists to tailor the news content to your interests.
-6. Sharing and Social Integration: Share articles with friends and family via social media platforms, promoting meaningful discussions and engaging with others.
+Still, work-in-progress features 4. Search Functionality: Easily search for specific news topics, articles, or keywords to find relevant information quickly and efficiently. 5. Personalized Reading Experience: Customize your news preferences, save articles for later, and create personalized reading lists to tailor the news content to your interests. 6. Sharing and Social Integration: Share articles with friends and family via social media platforms, promoting meaningful discussions and engaging with others.
 
 AccuDaily strives to be your trusted source of news, delivering accurate, timely, and engaging content that keeps you informed and connected to the world.
