@@ -1,13 +1,13 @@
 import { useApi } from "../Functionality/ApiContext";
 
-function Search() {
+function Search({ width }) {
   const { form, setForm, submitSearch } = useApi();
 
   return (
     <form
       onSubmit={submitSearch}
       className="container-xxl position-absolute end-0"
-      style={{ width: "18rem" }}
+      style={{ width: width }}
     >
       <input
         type="text"

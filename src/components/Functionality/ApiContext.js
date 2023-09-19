@@ -26,7 +26,7 @@ export const ApiProvider = ({ children }) => {
 
   const [form, setForm] = useState(localStorage.getItem("searchForm") || "");
 
-  function submitSearch(e) {
+  function submitSearch() {
     navigate(`search?query=${form}`);
   }
 

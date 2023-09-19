@@ -42,7 +42,12 @@ export default function Navbar() {
         >
           <div className="align-items-center gap-5 menu">
             <div>
-              <button className="icon-btn d-flex justify-content-center align-items-center">
+              <button
+                className="icon-btn d-flex justify-content-center align-items-center"
+                data-bs-toggle="offcanvas"
+                data-bs-target="#sidebar"
+                aria-controls="sidebar"
+              >
                 <span className="icons d-flex align-items-center">
                   <ion-icon name="menu-outline"></ion-icon>
                 </span>
@@ -57,7 +62,7 @@ export default function Navbar() {
           </div>
 
           <div className="d-flex align-items-center justify-content-end search">
-            <Search />
+            <Search width="18rem" />
           </div>
         </nav>
 
@@ -121,6 +126,62 @@ export default function Navbar() {
             </NavLink>
             <NavLink reloadDocument to="/fashion">
               <p className="f-xs pb-0">Fashion</p>
+            </NavLink>
+          </div>
+        </div>
+      </div>
+
+      {/* SIDEBAR */}
+      <div
+        className="offcanvas offcanvas-start"
+        tabIndex="-1"
+        id="sidebar"
+        aria-labelledby="sidebarLabel"
+      >
+        <div className="offcanvas-header">
+          <div>
+            <Link to="/AccuDaily" className="fs-2 fw-bold logo text-dark">
+              <img src={logo} alt="logo" />
+            </Link>
+          </div>
+          <button
+            type="button"
+            className="btn-close"
+            data-bs-dismiss="offcanvas"
+            aria-label="Close"
+          ></button>
+        </div>
+        <div className="offcanvas-body">
+          <Search width="100%" />
+
+          <div
+            className="d-grid w-100 gap-4 py-4"
+            style={{ marginTop: "3rem", paddingLeft: ".5rem" }}
+          >
+            <NavLink className="border-top py-3" reloadDocument to="/AccuDaily">
+              <p className="fs-5 pb-0 ">Home</p>
+            </NavLink>
+            <NavLink className="border-top py-3" reloadDocument to="/world">
+              <p className="fs-5 pb-0 ">World</p>
+            </NavLink>
+            <NavLink className="border-top py-3" reloadDocument to="/politics">
+              <p className="fs-5 pb-0 ">Politics</p>
+            </NavLink>
+            <NavLink className="border-top py-3" reloadDocument to="/business">
+              <p className="fs-5 pb-0">Business</p>
+            </NavLink>
+            <NavLink className="border-top py-3" reloadDocument to="/sports">
+              <p className="fs-5 pb-0">Sports</p>
+            </NavLink>
+            <NavLink className="border-top py-3" reloadDocument to="/arts">
+              <p className="fs-5 pb-0">Arts</p>
+            </NavLink>
+            <NavLink
+              className="border-top border-bottom py-3"
+              reloadDocument
+              to="/magazine"
+            >
+              <p className="fs-5 pb-0">Magazine</p>
             </NavLink>
           </div>
         </div>

@@ -69,30 +69,33 @@ img {
   display: none;
 }
 
-@media (max-width: 575.98px) {
-  .menu {
-    display: flex !important;
-  }
-
-  .navbar-menu {
-    justify-content: start !important;
-    margin-top: 1rem !important;
+@media (max-width: 767.98px) {
+  .nav_links {
+    display: none !important;
   }
 
   .search {
     display: none !important;
   }
-}
 
-@media (max-width: 767.98px) {
-  .navbar-menu-logo {
-    position: static !important;
-    left: 0 !important;
-    top: 0 !important;
-    transform: none !important;
+  .menu {
+    display: flex !important;
+  }
+
+  .navbar-menu {
+    border-bottom: 1px solid #dee2e6;
+  }
+
+  #navbar {
+    height: 4rem !important;
   }
 }
 
+@media (max-width: 575.98px) {
+  #navbar {
+    height: 3rem !important;
+  }
+}
 @media (max-width: 425.98px) {
   .sideBar {
     width: 10rem !important;

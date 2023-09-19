@@ -102,8 +102,9 @@ input {
   background: none;
 }
 
-.icons ion-icons {
-  height: 1.2rem;
+.icons ion-icon {
+  color: #e25720 !important;
+  font-size: 2rem !important;
 }
 
 /* FOOTER */
@@ -180,14 +181,6 @@ ion-icon {
 
   .sidebar-menu {
     width: 75% !important;
-  }
-
-  #navbar {
-    height: 3rem !important;
-  }
-
-  .nav_links {
-    display: none !important;
   }
 
   .ads {
