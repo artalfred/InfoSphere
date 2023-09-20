@@ -62,7 +62,7 @@ export default function Navbar() {
           </div>
 
           <div className="d-flex align-items-center justify-content-end search">
-            <Search width="18rem" />
+            <Search width="18rem" position="position-absolute end-0" />
           </div>
         </nav>
 
@@ -155,8 +155,8 @@ export default function Navbar() {
           <Search width="100%" />
 
           <div
-            className="d-grid w-100 gap-4 py-4"
-            style={{ marginTop: "3rem", paddingLeft: ".5rem" }}
+            className="d-grid w-100 py-4"
+            style={{ marginTop: "1rem", paddingLeft: ".5rem" }}
           >
             <NavLink className="border-top py-3" reloadDocument to="/AccuDaily">
               <p className="fs-5 pb-0 ">Home</p>
