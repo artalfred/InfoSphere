@@ -39,7 +39,10 @@ function Pages({ API }) {
                           reloadDocument
                           to={`/AccuDaily/${category}/${
                             item.id
-                          }/${item.multimedia[0].caption.replace(/\s+/g, "-")}`}
+                          }/${item.multimedia[0]?.caption?.replace(
+                            /\s+/g,
+                            "-"
+                          )}`}
                         >
                           <div className="card">
                             <div className="card-body border-bottom mb-3">
@@ -70,7 +73,10 @@ function Pages({ API }) {
                           reloadDocument
                           to={`/AccuDaily/${category}/${
                             item.id
-                          }/${item.multimedia[0].caption.replace(/\s+/g, "-")}`}
+                          }/${item.multimedia[0]?.caption?.replace(
+                            /\s+/g,
+                            "-"
+                          )}`}
                         >
                           <div className="card">
                             <div className="card-body">
@@ -104,7 +110,10 @@ function Pages({ API }) {
                           reloadDocument
                           to={`/AccuDaily/${category}/${
                             item.id
-                          }/${item.multimedia[0].caption.replace(/\s+/g, "-")}`}
+                          }/${item.multimedia[0]?.caption?.replace(
+                            /\s+/g,
+                            "-"
+                          )}`}
                         >
                           <div className="card">
                             <img
@@ -148,7 +157,10 @@ function Pages({ API }) {
                           reloadDocument
                           to={`/AccuDaily/${category}/${
                             item.id
-                          }/${item.multimedia[0].caption.replace(/\s+/g, "-")}`}
+                          }/${item.multimedia[0]?.caption?.replace(
+                            /\s+/g,
+                            "-"
+                          )}`}
                         >
                           <div className="card ">
                             <div className="card-body border-bottom mt-3">
@@ -179,7 +191,10 @@ function Pages({ API }) {
                           reloadDocument
                           to={`/AccuDaily/${category}/${
                             item.id
-                          }/${item.multimedia[0].caption.replace(/\s+/g, "-")}`}
+                          }/${item.multimedia[0]?.caption?.replace(
+                            /\s+/g,
+                            "-"
+                          )}`}
                         >
                           <div className="card">
                             <div className="card-body mt-3">
@@ -212,7 +227,10 @@ function Pages({ API }) {
                           reloadDocument
                           to={`/AccuDaily/${category}/${
                             item.id
-                          }/${item.multimedia[0].caption.replace(/\s+/g, "-")}`}
+                          }/${item.multimedia[0]?.caption?.replace(
+                            /\s+/g,
+                            "-"
+                          )}`}
                         >
                           <div className="card">
                             <div
@@ -259,7 +277,7 @@ function Pages({ API }) {
                           category={category}
                           id={item.id}
                           item={
-                            item.multimedia[0]?.caption.replace(/\s+/g, "-") ||
+                            item.multimedia[0]?.caption?.replace(/\s+/g, "-") ||
                             "Content Not Available"
                           }
                           img={
@@ -289,7 +307,7 @@ function Pages({ API }) {
                   reloadDocument
                   to={`/AccuDaily/${category}/${
                     item.id
-                  }/${item.multimedia[0].caption.replace(/\s+/g, "-")}`}
+                  }/${item.multimedia[0]?.caption?.replace(/\s+/g, "-")}`}
                 >
                   <div className="card ">
                     <img
@@ -323,7 +341,7 @@ function Pages({ API }) {
                   reloadDocument
                   to={`/AccuDaily/${category}/${
                     item.id
-                  }/${item.multimedia[0].caption.replace(/\s+/g, "-")}`}
+                  }/${item.multimedia[0]?.caption?.replace(/\s+/g, "-")}`}
                 >
                   <div className="card ">
                     <div className="card-body p-0 border-bottom mt-3">
@@ -352,7 +370,7 @@ function Pages({ API }) {
                   reloadDocument
                   to={`/AccuDaily/${category}/${
                     item.id
-                  }/${item.multimedia[0].caption.replace(/\s+/g, "-")}`}
+                  }/${item.multimedia[0]?.caption?.replace(/\s+/g, "-")}`}
                 >
                   <div className="card ">
                     <div className="card-body p-0 mt-3">
