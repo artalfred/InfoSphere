@@ -56,7 +56,7 @@ export default function Navbar() {
           </div>
 
           <div className="position-absolute top-50 start-50 translate-middle navbar-menu-logo">
-            <Link to="/AccuDaily" className="fs-2 fw-bold logo text-dark">
+            <Link to="/" className="fs-2 fw-bold logo text-dark">
               <img src={logo} alt="logo" />
             </Link>
           </div>
@@ -72,7 +72,7 @@ export default function Navbar() {
         >
           <div className="container-xxl">
             <div className="d-flex justify-content-start align-items-center gap-5 scroll py-2">
-              <NavLink reloadDocument to="/AccuDaily">
+              <NavLink reloadDocument to="/">
                 <p className="f-xs pb-0 ">Home</p>
               </NavLink>
               <NavLink reloadDocument to="/world">
@@ -158,7 +158,7 @@ export default function Navbar() {
             className="d-grid w-100 py-4"
             style={{ marginTop: "1rem", paddingLeft: ".5rem" }}
           >
-            <NavLink className="border-top py-3" reloadDocument to="/AccuDaily">
+            <NavLink className="border-top py-3" reloadDocument to="/">
               <p className="fs-5 pb-0 ">Home</p>
             </NavLink>
             <NavLink className="border-top py-3" reloadDocument to="/world">

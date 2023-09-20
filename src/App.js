@@ -24,7 +24,7 @@ function App() {
           <div className="App">
             <Navbar />
             <Routes>
-              <Route path="/AccuDaily" element={<Home />} />
+              <Route path="/" element={<Home />} />
               <Route path="/world" element={<World />} />
               <Route path="/politics" element={<Politics />} />
               <Route path="/business" element={<Business />} />

@@ -1,4 +1,4 @@
 [[redirects]]
-from = "AccuDaily*"
+from = "/*"
 to = "/index.html"
 status = 200
