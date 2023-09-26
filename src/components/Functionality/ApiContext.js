@@ -308,10 +308,6 @@ export const ApiProvider = ({ children }) => {
     fetchMagazineData();
   }, []);
 
-  useEffect(() => {
-    localStorage.setItem("homeData", JSON.stringify(home));
-  });
-
   return (
     <ApiContext.Provider
       value={{

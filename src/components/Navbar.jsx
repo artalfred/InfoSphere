@@ -72,25 +72,25 @@ export default function Navbar() {
         >
           <div className="container-xxl">
             <div className="d-flex justify-content-start align-items-center gap-5 scroll py-2">
-              <NavLink reloadDocument to="/">
+              <NavLink to="/">
                 <p className="f-xs pb-0 ">Home</p>
               </NavLink>
-              <NavLink reloadDocument to="/world">
+              <NavLink to="/world">
                 <p className="f-xs pb-0 ">World</p>
               </NavLink>
-              <NavLink reloadDocument to="/politics">
+              <NavLink to="/politics">
                 <p className="f-xs pb-0 ">Politics</p>
               </NavLink>
-              <NavLink reloadDocument to="/business">
+              <NavLink to="/business">
                 <p className="f-xs pb-0">Business</p>
               </NavLink>
-              <NavLink reloadDocument to="/sports">
+              <NavLink to="/sports">
                 <p className="f-xs pb-0">Sports</p>
               </NavLink>
-              <NavLink reloadDocument to="/arts">
+              <NavLink to="/arts">
                 <p className="f-xs pb-0">Arts</p>
               </NavLink>
-              <NavLink reloadDocument to="/magazine">
+              <NavLink to="/magazine">
                 <p className="f-xs pb-0">Magazine</p>
               </NavLink>
             </div>
@@ -106,25 +106,25 @@ export default function Navbar() {
       >
         <div className="container-xxl">
           <div className="d-flex justify-content-center align-items-center gap-5 scroll py-2">
-            <NavLink reloadDocument to="/AccuDaily">
+            <NavLink to="/">
               <p className="f-xs pb-0 ">Home</p>
             </NavLink>
-            <NavLink reloadDocument to="/world">
+            <NavLink to="/world">
               <p className="f-xs pb-0 ">World</p>
             </NavLink>
-            <NavLink reloadDocument to="/politics">
+            <NavLink to="/politics">
               <p className="f-xs pb-0 ">Politics</p>
             </NavLink>
-            <NavLink reloadDocument to="/business">
+            <NavLink to="/business">
               <p className="f-xs pb-0">Business</p>
             </NavLink>
-            <NavLink reloadDocument to="/sports">
+            <NavLink to="/sports">
               <p className="f-xs pb-0">Sports</p>
             </NavLink>
-            <NavLink reloadDocument to="/arts">
+            <NavLink to="/arts">
               <p className="f-xs pb-0">Arts</p>
             </NavLink>
-            <NavLink reloadDocument to="/fashion">
+            <NavLink to="/fashion">
               <p className="f-xs pb-0">Fashion</p>
             </NavLink>
           </div>
@@ -158,22 +158,22 @@ export default function Navbar() {
             className="d-grid w-100 py-4"
             style={{ marginTop: "1rem", paddingLeft: ".5rem" }}
           >
-            <NavLink className="border-top py-3" reloadDocument to="/">
+            <NavLink className="border-top py-3" to="/">
               <p className="fs-5 pb-0 ">Home</p>
             </NavLink>
-            <NavLink className="border-top py-3" reloadDocument to="/world">
+            <NavLink className="border-top py-3" to="/world">
               <p className="fs-5 pb-0 ">World</p>
             </NavLink>
-            <NavLink className="border-top py-3" reloadDocument to="/politics">
+            <NavLink className="border-top py-3" to="/politics">
               <p className="fs-5 pb-0 ">Politics</p>
             </NavLink>
-            <NavLink className="border-top py-3" reloadDocument to="/business">
+            <NavLink className="border-top py-3" to="/business">
               <p className="fs-5 pb-0">Business</p>
             </NavLink>
-            <NavLink className="border-top py-3" reloadDocument to="/sports">
+            <NavLink className="border-top py-3" to="/sports">
               <p className="fs-5 pb-0">Sports</p>
             </NavLink>
-            <NavLink className="border-top py-3" reloadDocument to="/arts">
+            <NavLink className="border-top py-3" to="/arts">
               <p className="fs-5 pb-0">Arts</p>
             </NavLink>
             <NavLink
