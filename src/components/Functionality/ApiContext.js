@@ -51,7 +51,7 @@ export const ApiProvider = ({ children }) => {
 
     try {
       setIsLoading(true);
-      setError("");
+      setError(null);
 
       const res = await fetch(
         `https://api.nytimes.com/svc/search/v2/articlesearch.json?q=${form}&api-key=${apiKey}`,
@@ -70,9 +70,7 @@ export const ApiProvider = ({ children }) => {
 
       setSearchApiResults(dataWithIds);
     } catch (err) {
-      if (err.name !== "AbortError") {
-        setError(err.message);
-      }
+      setError(err.message);
     } finally {
       setIsLoading(false);
     }
@@ -83,7 +81,7 @@ export const ApiProvider = ({ children }) => {
 
     try {
       setIsLoading(true);
-      setError("");
+      setError(null);
       const res = await fetch(
         `${urlApi}/${homeSection}.json?api-key=${apiKey}`,
         {
@@ -104,9 +102,7 @@ export const ApiProvider = ({ children }) => {
 
       setHome(dataWithIds);
     } catch (err) {
-      if (err.name !== "AbortError") {
-        setError(err.message);
-      }
+      setError(err.message);
     } finally {
       setIsLoading(false);
     }
@@ -117,7 +113,7 @@ export const ApiProvider = ({ children }) => {
 
     try {
       setIsLoading(true);
-      setError("");
+      setError(null);
       const res = await fetch(
         `${urlApi}/${worldSection}.json?api-key=${apiKey}`,
         {
@@ -138,9 +134,7 @@ export const ApiProvider = ({ children }) => {
 
       setWorld(dataWithIds);
     } catch (err) {
-      if (err.name !== "AbortError") {
-        setError(err.message);
-      }
+      setError(err.message);
     } finally {
       setIsLoading(false);
     }
@@ -151,7 +145,7 @@ export const ApiProvider = ({ children }) => {
 
     try {
       setIsLoading(true);
-      setError("");
+      setError(null);
       const res = await fetch(
         `${urlApi}/${politicsSection}.json?api-key=${apiKey}`,
         {
@@ -172,9 +166,7 @@ export const ApiProvider = ({ children }) => {
 
       setPolitics(dataWithIds);
     } catch (err) {
-      if (err.name !== "AbortError") {
-        setError(err.message);
-      }
+      setError(err.message);
     } finally {
       setIsLoading(false);
     }
@@ -185,7 +177,7 @@ export const ApiProvider = ({ children }) => {
 
     try {
       setIsLoading(true);
-      setError("");
+      setError(null);
       const res = await fetch(
         `${urlApi}/${businessSection}.json?api-key=${apiKey}`,
         {
@@ -206,9 +198,7 @@ export const ApiProvider = ({ children }) => {
 
       setBusiness(dataWithIds);
     } catch (err) {
-      if (err.name !== "AbortError") {
-        setError(err.message);
-      }
+      setError(err.message);
     } finally {
       setIsLoading(false);
     }
@@ -219,7 +209,7 @@ export const ApiProvider = ({ children }) => {
 
     try {
       setIsLoading(true);
-      setError("");
+      setError(null);
       const res = await fetch(
         `${urlApi}/${sportsSection}.json?api-key=${apiKey}`,
         {
@@ -240,9 +230,7 @@ export const ApiProvider = ({ children }) => {
 
       setSports(dataWithIds);
     } catch (err) {
-      if (err.name !== "AbortError") {
-        setError(err.message);
-      }
+      setError(err.message);
     } finally {
       setIsLoading(false);
     }
@@ -253,7 +241,7 @@ export const ApiProvider = ({ children }) => {
 
     try {
       setIsLoading(true);
-      setError("");
+      setError(null);
       const res = await fetch(
         `${urlApi}/${artsSection}.json?api-key=${apiKey}`,
         {
@@ -273,9 +261,7 @@ export const ApiProvider = ({ children }) => {
 
       setArts(dataWithIds);
     } catch (err) {
-      if (err.name !== "AbortError") {
-        setError(err.message);
-      }
+      setError(err.message);
     } finally {
       setIsLoading(false);
     }
@@ -286,7 +272,7 @@ export const ApiProvider = ({ children }) => {
 
     try {
       setIsLoading(true);
-      setError("");
+      setError(null);
       const res = await fetch(
         `${urlApi}/${magazineSection}.json?api-key=${apiKey}`,
         { signal: controller.signal }
@@ -304,14 +290,13 @@ export const ApiProvider = ({ children }) => {
 
       setMagazine(dataWithIds);
     } catch (err) {
-      if (err.name !== "AbortError") {
-        setError(err.message);
-      }
+      setError(err.message);
     } finally {
       setIsLoading(false);
     }
   };
 
+  // FETCHING DATA
   useEffect(() => {
     searchApi();
     fetchHomeData();
@@ -322,6 +307,10 @@ export const ApiProvider = ({ children }) => {
     fetchArtsData();
     fetchMagazineData();
   }, []);
+
+  useEffect(() => {
+    localStorage.setItem("homeData", JSON.stringify(home));
+  });
 
   return (
     <ApiContext.Provider
