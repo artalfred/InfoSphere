@@ -277,8 +277,10 @@ function Pages({ API }) {
                           category={category}
                           id={item.id}
                           item={
-                            item.multimedia[0]?.caption?.replace(/\s+/g, "-") ||
-                            "Content Not Available"
+                            item.multimedia?.[0].caption?.replace(
+                              /\s+/g,
+                              "-"
+                            ) || "Content Not Available"
                           }
                           img={
                             item.multimedia?.[0]?.url || "Content Not Available"
