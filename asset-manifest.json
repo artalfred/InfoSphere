@@ -1,14 +1,14 @@
 {
   "files": {
     "main.css": "/InfoSphere/static/css/main.08c78b9b.css",
-    "main.js": "/InfoSphere/static/js/main.eb0f5b9e.js",
+    "main.js": "/InfoSphere/static/js/main.c8e632a0.js",
     "static/media/Georgia.ttf": "/InfoSphere/static/media/Georgia.5b8bb278fcab4da4972e.ttf",
     "index.html": "/InfoSphere/index.html",
     "main.08c78b9b.css.map": "/InfoSphere/static/css/main.08c78b9b.css.map",
-    "main.eb0f5b9e.js.map": "/InfoSphere/static/js/main.eb0f5b9e.js.map"
+    "main.c8e632a0.js.map": "/InfoSphere/static/js/main.c8e632a0.js.map"
   },
   "entrypoints": [
     "static/css/main.08c78b9b.css",
-    "static/js/main.eb0f5b9e.js"
+    "static/js/main.c8e632a0.js"
   ]
 }
