@@ -32,7 +32,7 @@ function App() {
               <Route path="/arts" element={<Arts />} />
               <Route path="/magazine" element={<Magazine />} />
               <Route
-                path="/AccuDaily/:path/:latestId/:name"
+                path="/:path/:latestId/:name"
                 element={<HomeArticlePage />}
               />
               <Route path="*" element={<Error message="Page not found ❌" />} />
