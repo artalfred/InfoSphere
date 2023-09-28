@@ -37,7 +37,7 @@ function Pages({ API }) {
                       ) : (
                         <Link
                           reloadDocument
-                          to={`/InfoSphere/${category}/${
+                          to={`/${category}/${
                             item.id
                           }/${item.multimedia[0]?.caption?.replace(
                             /\s+/g,
@@ -71,7 +71,7 @@ function Pages({ API }) {
                       ) : (
                         <Link
                           reloadDocument
-                          to={`/InfoSphere/${category}/${
+                          to={`/${category}/${
                             item.id
                           }/${item.multimedia[0]?.caption?.replace(
                             /\s+/g,
@@ -108,7 +108,7 @@ function Pages({ API }) {
                       ) : (
                         <Link
                           reloadDocument
-                          to={`/InfoSphere/${category}/${
+                          to={`/${category}/${
                             item.id
                           }/${item.multimedia[0]?.caption?.replace(
                             /\s+/g,
@@ -155,7 +155,7 @@ function Pages({ API }) {
                       ) : (
                         <Link
                           reloadDocument
-                          to={`/InfoSphere/${category}/${
+                          to={`/${category}/${
                             item.id
                           }/${item.multimedia[0]?.caption?.replace(
                             /\s+/g,
@@ -189,7 +189,7 @@ function Pages({ API }) {
                       ) : (
                         <Link
                           reloadDocument
-                          to={`/InfoSphere/${category}/${
+                          to={`/${category}/${
                             item.id
                           }/${item.multimedia[0]?.caption?.replace(
                             /\s+/g,
@@ -225,7 +225,7 @@ function Pages({ API }) {
                       ) : (
                         <Link
                           reloadDocument
-                          to={`/InfoSphere/${category}/${
+                          to={`/${category}/${
                             item.id
                           }/${item.multimedia[0]?.caption?.replace(
                             /\s+/g,
@@ -307,7 +307,7 @@ function Pages({ API }) {
               ) : (
                 <Link
                   reloadDocument
-                  to={`/InfoSphere/${category}/${
+                  to={`/${category}/${
                     item.id
                   }/${item.multimedia[0]?.caption?.replace(/\s+/g, "-")}`}
                 >
@@ -341,7 +341,7 @@ function Pages({ API }) {
               ) : (
                 <Link
                   reloadDocument
-                  to={`/InfoSphere/${category}/${
+                  to={`/${category}/${
                     item.id
                   }/${item.multimedia[0]?.caption?.replace(/\s+/g, "-")}`}
                 >
@@ -370,7 +370,7 @@ function Pages({ API }) {
               ) : (
                 <Link
                   reloadDocument
-                  to={`/InfoSphere/${category}/${
+                  to={`/${category}/${
                     item.id
                   }/${item.multimedia[0]?.caption?.replace(/\s+/g, "-")}`}
                 >
