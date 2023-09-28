@@ -35,7 +35,7 @@ export const ApiProvider = ({ children }) => {
   const [form, setForm] = useState(localStorage.getItem("searchForm") || "");
 
   function submitSearch() {
-    navigate(`InfoSphere/search?query=${form}`);
+    navigate(`AccuDaily/search?query=${form}`);
   }
 
   useEffect(() => {
