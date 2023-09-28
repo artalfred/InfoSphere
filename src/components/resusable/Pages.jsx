@@ -6,6 +6,8 @@ import { useCategory } from "../Functionality/CategoryContext";
 import Error from "./Error";
 import { useApi } from "../Functionality/ApiContext";
 
+import err from "../../img/err.png";
+
 function Pages({ API }) {
   const { category, setCategory } = useCategory();
 
@@ -32,17 +34,17 @@ function Pages({ API }) {
                 <div className="col-12 col-md-4 col-lg-4 order-2 order-sm-2 order-md-2 order-lg-1">
                   {API?.slice(0, 2).map((item, index) => (
                     <div key={index}>
-                      {!item ? (
-                        <Error message="Error Fetching Data" />
+                      {!item.title ? (
+                        <div className="border-bottom pb-4">
+                          <Error message="Error Fetching Data" />
+                        </div>
                       ) : (
                         <Link
                           reloadDocument
-                          to={`/${category}/${
-                            item.id
-                          }/${item.multimedia[0]?.caption?.replace(
-                            /\s+/g,
-                            "-"
-                          )}`}
+                          to={`/${category}/${item.id}/${
+                            item.multimedia[0]?.caption?.replace(/\s+/g, "-") ||
+                            "Undefined"
+                          }`}
                         >
                           <div className="card">
                             <div className="card-body border-bottom mb-3">
@@ -66,8 +68,10 @@ function Pages({ API }) {
                   ))}
                   {API?.slice(2, 3).map((item, index) => (
                     <div key={index}>
-                      {!item ? (
-                        <Error message="Error Fetching Data" />
+                      {!item.title ? (
+                        <div className="border-bottom pb-4">
+                          <Error message="Error Fetching Data" />
+                        </div>
                       ) : (
                         <Link
                           reloadDocument
@@ -103,8 +107,14 @@ function Pages({ API }) {
                 <div className="col-12 col-md-8 col-lg-8 order-1 order-sm-1 order-md-1 order-lg-2">
                   {API?.slice(3, 4).map((item, index) => (
                     <div key={index}>
-                      {!item ? (
-                        <Error message="Error Fetching Data" />
+                      {!item.title ? (
+                        <div className="card">
+                          <img
+                            src={item.multimedia?.[0]?.url && err}
+                            className="img-fluid "
+                            alt="..."
+                          />
+                        </div>
                       ) : (
                         <Link
                           reloadDocument
@@ -150,8 +160,10 @@ function Pages({ API }) {
                 <div className="col-12 col-md-4 col-lg-4">
                   {API?.slice(4, 7).map((item, index) => (
                     <div key={index}>
-                      {!item ? (
-                        <Error message="Error Fetching Data" />
+                      {!item.title ? (
+                        <div className="border-bottom pb-4">
+                          <Error message="Error Fetching Data" />
+                        </div>
                       ) : (
                         <Link
                           reloadDocument
@@ -220,8 +232,14 @@ function Pages({ API }) {
                 <div className="col-md-8 col-lg-8">
                   {API?.slice(8, 9).map((item, index) => (
                     <div key={index}>
-                      {!item ? (
-                        <Error message="Error Fetching Data" />
+                      {!item.title ? (
+                        <div className="card">
+                          <img
+                            src={item.multimedia?.[0]?.url && err}
+                            className="img-fluid "
+                            alt="..."
+                          />
+                        </div>
                       ) : (
                         <Link
                           reloadDocument
@@ -270,7 +288,7 @@ function Pages({ API }) {
                 {API?.slice(9, 14).map((item, index) => {
                   return (
                     <div className="col-12 col-md-4" key={index}>
-                      {!item ? (
+                      {!item.title ? (
                         <Error message="Error Fetching Data" />
                       ) : (
                         <Cards
@@ -302,7 +320,7 @@ function Pages({ API }) {
         <div className="col-xs-12 col-md-12 col-lg-3 border-start order-2 order-md-2 order-lg-2">
           {API?.slice(15, 16).map((item, index) => (
             <div key={index}>
-              {!item ? (
+              {!item.title ? (
                 <Error message="Error Fetching Data" />
               ) : (
                 <Link
@@ -336,7 +354,7 @@ function Pages({ API }) {
           ))}
           {API?.slice(16, 24).map((item, index) => (
             <div key={index}>
-              {!item ? (
+              {!item.title ? (
                 <Error message="Error Fetching Data" />
               ) : (
                 <Link
@@ -365,7 +383,7 @@ function Pages({ API }) {
           ))}
           {API?.slice(25, 26).map((item, index) => (
             <div key={index}>
-              {!item ? (
+              {!item.title ? (
                 <Error message="Error Fetching Data" />
               ) : (
                 <Link
