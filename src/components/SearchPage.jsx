@@ -4,13 +4,13 @@ import { Link } from "react-router-dom";
 import { useApi } from "./Functionality/ApiContext";
 
 function SearchPage() {
-  const { isLoading, error, searchApiResults, form } = useApi();
+  const { isResultsError, isResultsLoading, searchApiResults, form } = useApi();
 
   return (
     <div className="container mt-5 hm-Artcle-Pg">
-      {error ? (
-        <Error message={error} />
-      ) : isLoading ? (
+      {isResultsError ? (
+        <Error message={isResultsError} />
+      ) : isResultsLoading ? (
         <IsLoading />
       ) : (
         <>
@@ -26,6 +26,7 @@ function SearchPage() {
               Showing {searchApiResults.length} results for: {form}
             </h6>
           </div>
+
           {searchApiResults?.map((item) => {
             const dateString = item.pub_date;
             const dateObject = new Date(dateString);

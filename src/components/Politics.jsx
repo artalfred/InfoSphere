@@ -6,15 +6,16 @@ import Error from "./resusable/Error";
 import { useApi } from "./Functionality/ApiContext";
 
 export default function Politics() {
-  const { politics, isLoading, error } = useApi();
+  const { politics, isPoliticsLoading, isPoliticsError } = useApi();
+
   return (
     <div>
       <div className="container-xxl p-2">
-        {error ? (
-          <Error message={error} />
+        {isPoliticsError ? (
+          <Error message={isPoliticsError} />
         ) : (
           <>
-            {isLoading ? (
+            {isPoliticsLoading ? (
               <IsLoading />
             ) : (
               <>

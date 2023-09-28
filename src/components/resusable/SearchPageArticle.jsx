@@ -7,14 +7,14 @@ import SearchRelated from "./SearchRelated";
 function SearchPageArticle() {
   const { articleId } = useParams();
 
-  const { searchApiResults, isLoading } = useApi();
+  const { searchApiResults, isResultsLoading } = useApi();
 
   const [id] = useState(articleId);
 
   return (
     <>
       <div className="container mt-5 hm-Artcle-Pg">
-        {isLoading ? (
+        {isResultsLoading ? (
           <IsLoading />
         ) : (
           <>

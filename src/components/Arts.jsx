@@ -5,16 +5,16 @@ import Error from "./resusable/Error";
 import { useApi } from "./Functionality/ApiContext";
 
 export default function Arts() {
-  const { arts, isLoading, error } = useApi();
+  const { arts, isArtsLoading, isArtsError } = useApi();
 
   return (
     <div>
       <div className="container-xxl p-2">
-        {error ? (
-          <Error message={error} />
+        {isArtsError ? (
+          <Error message={isArtsError} />
         ) : (
           <>
-            {isLoading ? (
+            {isArtsLoading ? (
               <IsLoading />
             ) : (
               <>

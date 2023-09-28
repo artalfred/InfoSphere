@@ -72,25 +72,25 @@ export default function Navbar() {
         >
           <div className="container-xxl">
             <div className="d-flex justify-content-start align-items-center gap-5 scroll py-2">
-              <NavLink to="/">
+              <NavLink reloadDocument to="/InfoSphere">
                 <p className="f-xs pb-0 ">Home</p>
               </NavLink>
-              <NavLink to="/world">
+              <NavLink reloadDocument to="/InfoSphere/world">
                 <p className="f-xs pb-0 ">World</p>
               </NavLink>
-              <NavLink to="/politics">
+              <NavLink reloadDocument to="/InfoSphere/politics">
                 <p className="f-xs pb-0 ">Politics</p>
               </NavLink>
-              <NavLink to="/business">
+              <NavLink reloadDocument to="/InfoSphere/business">
                 <p className="f-xs pb-0">Business</p>
               </NavLink>
-              <NavLink to="/sports">
+              <NavLink reloadDocument to="/InfoSphere/sports">
                 <p className="f-xs pb-0">Sports</p>
               </NavLink>
-              <NavLink to="/arts">
+              <NavLink reloadDocument to="/InfoSphere/arts">
                 <p className="f-xs pb-0">Arts</p>
               </NavLink>
-              <NavLink to="/magazine">
+              <NavLink reloadDocument to="/InfoSphere/magazine">
                 <p className="f-xs pb-0">Magazine</p>
               </NavLink>
             </div>
@@ -106,25 +106,25 @@ export default function Navbar() {
       >
         <div className="container-xxl">
           <div className="d-flex justify-content-center align-items-center gap-5 scroll py-2">
-            <NavLink to="/">
+            <NavLink reloadDocument to="/InfoSphere">
               <p className="f-xs pb-0 ">Home</p>
             </NavLink>
-            <NavLink to="/world">
+            <NavLink reloadDocument to="/InfoSphere/world">
               <p className="f-xs pb-0 ">World</p>
             </NavLink>
-            <NavLink to="/politics">
+            <NavLink reloadDocument to="/InfoSphere/politics">
               <p className="f-xs pb-0 ">Politics</p>
             </NavLink>
-            <NavLink to="/business">
+            <NavLink reloadDocument to="/InfoSphere/business">
               <p className="f-xs pb-0">Business</p>
             </NavLink>
-            <NavLink to="/sports">
+            <NavLink reloadDocument to="/InfoSphere/sports">
               <p className="f-xs pb-0">Sports</p>
             </NavLink>
-            <NavLink to="/arts">
+            <NavLink reloadDocument to="/InfoSphere/arts">
               <p className="f-xs pb-0">Arts</p>
             </NavLink>
-            <NavLink to="/fashion">
+            <NavLink reloadDocument to="/InfoSphere/magazine">
               <p className="f-xs pb-0">Fashion</p>
             </NavLink>
           </div>
@@ -158,22 +158,46 @@ export default function Navbar() {
             className="d-grid w-100 py-4"
             style={{ marginTop: "1rem", paddingLeft: ".5rem" }}
           >
-            <NavLink className="border-top py-3" to="/">
+            <NavLink
+              reloadDocument
+              className="border-top py-3"
+              to="/InfoSphere"
+            >
               <p className="fs-5 pb-0 ">Home</p>
             </NavLink>
-            <NavLink className="border-top py-3" to="/world">
+            <NavLink
+              reloadDocument
+              className="border-top py-3"
+              to="/InfoSphere/world"
+            >
               <p className="fs-5 pb-0 ">World</p>
             </NavLink>
-            <NavLink className="border-top py-3" to="/politics">
+            <NavLink
+              reloadDocument
+              className="border-top py-3"
+              to="/InfoSphere/politics"
+            >
               <p className="fs-5 pb-0 ">Politics</p>
             </NavLink>
-            <NavLink className="border-top py-3" to="/business">
+            <NavLink
+              reloadDocument
+              className="border-top py-3"
+              to="/InfoSphere/business"
+            >
               <p className="fs-5 pb-0">Business</p>
             </NavLink>
-            <NavLink className="border-top py-3" to="/sports">
+            <NavLink
+              reloadDocument
+              className="border-top py-3"
+              to="/InfoSphere/sports"
+            >
               <p className="fs-5 pb-0">Sports</p>
             </NavLink>
-            <NavLink className="border-top py-3" to="/arts">
+            <NavLink
+              reloadDocument
+              className="border-top py-3"
+              to="/InfoSphere/arts"
+            >
               <p className="fs-5 pb-0">Arts</p>
             </NavLink>
             <NavLink

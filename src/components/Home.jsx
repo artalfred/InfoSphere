@@ -8,15 +8,15 @@ import Error from "./resusable/Error";
 import { useApi } from "./Functionality/ApiContext";
 
 export default function Home() {
-  const { home, isLoading, error } = useApi();
+  const { home, isHomeError, ishomeLoading } = useApi();
 
   return (
     <div className="container-xxl p-2">
-      {error ? (
-        <Error message={error} />
+      {isHomeError ? (
+        <Error message={isHomeError} />
       ) : (
         <>
-          {isLoading ? (
+          {ishomeLoading ? (
             <IsLoading />
           ) : (
             <>
@@ -30,7 +30,7 @@ export default function Home() {
 
               {/* PAGES */}
               <div className="row gx-5 mt-4" style={{ height: "auto" }}>
-                <Pages API={home} />
+                <Pages API={home} home={home} />
               </div>
             </>
           )}

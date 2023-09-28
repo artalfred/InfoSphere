@@ -5,16 +5,16 @@ import Error from "./resusable/Error";
 import { useApi } from "./Functionality/ApiContext";
 
 export default function Sports() {
-  const { sports, isLoading, error } = useApi();
+  const { sports, isSportLoading, isSportsError } = useApi();
 
   return (
     <div>
       <div className="container-xxl p-2">
-        {error ? (
-          <Error message={error} />
+        {isSportsError ? (
+          <Error message={isSportsError} />
         ) : (
           <>
-            {isLoading ? (
+            {isSportLoading ? (
               <IsLoading />
             ) : (
               <>

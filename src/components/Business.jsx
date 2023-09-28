@@ -5,16 +5,16 @@ import Error from "./resusable/Error";
 import { useApi } from "./Functionality/ApiContext";
 
 export default function Business() {
-  const { business, isLoading, error } = useApi();
+  const { business, isBusinessLoading, isBusinessError } = useApi();
 
   return (
     <div>
       <div className="container-xxl p-2">
-        {error ? (
-          <Error message={error} />
+        {isBusinessError ? (
+          <Error message={isBusinessError} />
         ) : (
           <>
-            {isLoading ? (
+            {isBusinessLoading ? (
               <IsLoading />
             ) : (
               <>

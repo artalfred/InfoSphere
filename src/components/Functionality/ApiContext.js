@@ -9,25 +9,33 @@ export const useApi = () => {
 
 const urlApi = "https://api.nytimes.com/svc/topstories/v2";
 const apiKey = "wbvqsqGzDnecddBOkQqrtUTSnM08QqXS";
-const homeSection = "home";
-const worldSection = "world";
-const politicsSection = "politics";
-const businessSection = "business";
-const sportsSection = "sports";
-const artsSection = "arts";
-const magazineSection = "t-magazine";
 
 export const ApiProvider = ({ children }) => {
   const [searchApiResults, setSearchApiResults] = useState([]);
-  const [isLoading, setIsLoading] = useState(false);
-  const [error, setError] = useState(null);
-
   const navigate = useNavigate();
+
+  // ERROR HANDLING EACH SECTION
+  const [isHomeLoading, setIsHomeLoading] = useState(false);
+  const [isHomeError, setIsHomeError] = useState(null);
+  const [isWorldLoading, setIsWorldLoading] = useState(false);
+  const [isWorldError, setIsWorldError] = useState(null);
+  const [isPoliticsLoading, setIsPoliticsLoading] = useState(false);
+  const [isPoliticsError, setIsPoliticsError] = useState(null);
+  const [isBusinessLoading, setIsBusinessLoading] = useState(false);
+  const [isBusinessError, setIsBusinessError] = useState(null);
+  const [isSportsLoading, setIsSportsLoading] = useState(false);
+  const [isSportsError, setIsSportsError] = useState(null);
+  const [isArtsLoading, setIsArtsLoading] = useState(false);
+  const [isArtsError, setIsArtsError] = useState(null);
+  const [isMagazineLoading, setIsMagazineLoading] = useState(false);
+  const [isMagazineError, setIsMagazineError] = useState(null);
+  const [isResultsLoading, setIsResultsLoading] = useState(false);
+  const [isResultsError, setIsResultsError] = useState(null);
 
   const [form, setForm] = useState(localStorage.getItem("searchForm") || "");
 
   function submitSearch() {
-    navigate(`search?query=${form}`);
+    navigate(`InfoSphere/search?query=${form}`);
   }
 
   useEffect(() => {
@@ -50,8 +58,8 @@ export const ApiProvider = ({ children }) => {
     const controller = new AbortController();
 
     try {
-      setIsLoading(true);
-      setError(null);
+      setIsResultsLoading(true);
+      setIsResultsError(null);
 
       const res = await fetch(
         `https://api.nytimes.com/svc/search/v2/articlesearch.json?q=${form}&api-key=${apiKey}`,
@@ -70,9 +78,9 @@ export const ApiProvider = ({ children }) => {
 
       setSearchApiResults(dataWithIds);
     } catch (err) {
-      setError(err.message);
+      setIsResultsError(err.message);
     } finally {
-      setIsLoading(false);
+      setIsResultsLoading(false);
     }
   };
 
@@ -80,14 +88,11 @@ export const ApiProvider = ({ children }) => {
     const controller = new AbortController();
 
     try {
-      setIsLoading(true);
-      setError(null);
-      const res = await fetch(
-        `${urlApi}/${homeSection}.json?api-key=${apiKey}`,
-        {
-          signal: controller.signal,
-        }
-      );
+      setIsHomeLoading(true);
+      setIsHomeError(null);
+      const res = await fetch(`${urlApi}/home.json?api-key=${apiKey}`, {
+        signal: controller.signal,
+      });
 
       if (!res.ok)
         throw new Error("Someting went wrong with fetching the data");
@@ -102,9 +107,9 @@ export const ApiProvider = ({ children }) => {
 
       setHome(dataWithIds);
     } catch (err) {
-      setError(err.message);
+      setIsHomeError(err.message);
     } finally {
-      setIsLoading(false);
+      setIsHomeLoading(false);
     }
   };
 
@@ -112,14 +117,11 @@ export const ApiProvider = ({ children }) => {
     const controller = new AbortController();
 
     try {
-      setIsLoading(true);
-      setError(null);
-      const res = await fetch(
-        `${urlApi}/${worldSection}.json?api-key=${apiKey}`,
-        {
-          signal: controller.signal,
-        }
-      );
+      setIsWorldLoading(true);
+      setIsWorldError(null);
+      const res = await fetch(`${urlApi}/world.json?api-key=${apiKey}`, {
+        signal: controller.signal,
+      });
 
       if (!res.ok)
         throw new Error("Someting went wrong with fetching the data");
@@ -134,9 +136,9 @@ export const ApiProvider = ({ children }) => {
 
       setWorld(dataWithIds);
     } catch (err) {
-      setError(err.message);
+      setIsWorldError(err.message);
     } finally {
-      setIsLoading(false);
+      setIsWorldLoading(false);
     }
   };
 
@@ -144,14 +146,11 @@ export const ApiProvider = ({ children }) => {
     const controller = new AbortController();
 
     try {
-      setIsLoading(true);
-      setError(null);
-      const res = await fetch(
-        `${urlApi}/${politicsSection}.json?api-key=${apiKey}`,
-        {
-          signal: controller.signal,
-        }
-      );
+      setIsPoliticsLoading(true);
+      setIsPoliticsError(null);
+      const res = await fetch(`${urlApi}/politics.json?api-key=${apiKey}`, {
+        signal: controller.signal,
+      });
 
       if (!res.ok)
         throw new Error("Someting went wrong with fetching the data");
@@ -166,9 +165,9 @@ export const ApiProvider = ({ children }) => {
 
       setPolitics(dataWithIds);
     } catch (err) {
-      setError(err.message);
+      setIsPoliticsError(err.message);
     } finally {
-      setIsLoading(false);
+      setIsPoliticsLoading(false);
     }
   };
 
@@ -176,14 +175,11 @@ export const ApiProvider = ({ children }) => {
     const controller = new AbortController();
 
     try {
-      setIsLoading(true);
-      setError(null);
-      const res = await fetch(
-        `${urlApi}/${businessSection}.json?api-key=${apiKey}`,
-        {
-          signal: controller.signal,
-        }
-      );
+      setIsBusinessLoading(true);
+      setIsBusinessError(null);
+      const res = await fetch(`${urlApi}/business.json?api-key=${apiKey}`, {
+        signal: controller.signal,
+      });
 
       if (!res.ok)
         throw new Error("Someting went wrong with fetching the data");
@@ -198,9 +194,9 @@ export const ApiProvider = ({ children }) => {
 
       setBusiness(dataWithIds);
     } catch (err) {
-      setError(err.message);
+      setIsBusinessError(err.message);
     } finally {
-      setIsLoading(false);
+      setIsBusinessLoading(false);
     }
   };
 
@@ -208,14 +204,11 @@ export const ApiProvider = ({ children }) => {
     const controller = new AbortController();
 
     try {
-      setIsLoading(true);
-      setError(null);
-      const res = await fetch(
-        `${urlApi}/${sportsSection}.json?api-key=${apiKey}`,
-        {
-          signal: controller.signal,
-        }
-      );
+      setIsSportsLoading(true);
+      setIsSportsError(null);
+      const res = await fetch(`${urlApi}/sports.json?api-key=${apiKey}`, {
+        signal: controller.signal,
+      });
 
       if (!res.ok)
         throw new Error("Someting went wrong with fetching the data");
@@ -230,9 +223,9 @@ export const ApiProvider = ({ children }) => {
 
       setSports(dataWithIds);
     } catch (err) {
-      setError(err.message);
+      setIsSportsError(err.message);
     } finally {
-      setIsLoading(false);
+      setIsSportsLoading(false);
     }
   };
 
@@ -240,14 +233,11 @@ export const ApiProvider = ({ children }) => {
     const controller = new AbortController();
 
     try {
-      setIsLoading(true);
-      setError(null);
-      const res = await fetch(
-        `${urlApi}/${artsSection}.json?api-key=${apiKey}`,
-        {
-          signal: controller.signal,
-        }
-      );
+      setIsArtsLoading(true);
+      setIsArtsError(null);
+      const res = await fetch(`${urlApi}/arts.json?api-key=${apiKey}`, {
+        signal: controller.signal,
+      });
 
       if (!res.ok)
         throw new Error("Someting went wrong with fetching the data");
@@ -261,9 +251,9 @@ export const ApiProvider = ({ children }) => {
 
       setArts(dataWithIds);
     } catch (err) {
-      setError(err.message);
+      setIsArtsError(err.message);
     } finally {
-      setIsLoading(false);
+      setIsArtsLoading(false);
     }
   };
 
@@ -271,12 +261,11 @@ export const ApiProvider = ({ children }) => {
     const controller = new AbortController();
 
     try {
-      setIsLoading(true);
-      setError(null);
-      const res = await fetch(
-        `${urlApi}/${magazineSection}.json?api-key=${apiKey}`,
-        { signal: controller.signal }
-      );
+      setIsMagazineLoading(true);
+      setIsMagazineError(null);
+      const res = await fetch(`${urlApi}/t-magazine.json?api-key=${apiKey}`, {
+        signal: controller.signal,
+      });
 
       if (!res.ok)
         throw new Error("Someting went wrong with fetching the data");
@@ -290,9 +279,9 @@ export const ApiProvider = ({ children }) => {
 
       setMagazine(dataWithIds);
     } catch (err) {
-      setError(err.message);
+      setIsMagazineError(err.message);
     } finally {
-      setIsLoading(false);
+      setIsMagazineLoading(false);
     }
   };
 
@@ -312,8 +301,6 @@ export const ApiProvider = ({ children }) => {
     <ApiContext.Provider
       value={{
         searchApiResults,
-        isLoading,
-        error,
         home,
         world,
         politics,
@@ -325,6 +312,24 @@ export const ApiProvider = ({ children }) => {
         form,
         setForm,
         submitSearch,
+        urlApi,
+        apiKey,
+        isHomeError,
+        isHomeLoading,
+        isWorldError,
+        isWorldLoading,
+        isPoliticsError,
+        isPoliticsLoading,
+        isBusinessError,
+        isBusinessLoading,
+        isSportsError,
+        isSportsLoading,
+        isArtsError,
+        isArtsLoading,
+        isMagazineError,
+        isMagazineLoading,
+        isResultsError,
+        isResultsLoading,
       }}
     >
       {children}

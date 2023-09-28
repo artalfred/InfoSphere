@@ -24,19 +24,19 @@ function App() {
           <div className="App">
             <Navbar />
             <Routes>
-              <Route path="/" element={<Home />} />
-              <Route path="/world" element={<World />} />
-              <Route path="/politics" element={<Politics />} />
-              <Route path="/business" element={<Business />} />
-              <Route path="/sports" element={<Sports />} />
-              <Route path="/arts" element={<Arts />} />
-              <Route path="/magazine" element={<Magazine />} />
+              <Route path="/InfoSphere" element={<Home />} />
+              <Route path="/InfoSphere/world" element={<World />} />
+              <Route path="/InfoSphere/politics" element={<Politics />} />
+              <Route path="/InfoSphere/business" element={<Business />} />
+              <Route path="/InfoSphere/sports" element={<Sports />} />
+              <Route path="/InfoSphere/arts" element={<Arts />} />
+              <Route path="/InfoSphere/magazine" element={<Magazine />} />
               <Route
                 path="/AccuDaily/:path/:latestId/:name"
                 element={<HomeArticlePage />}
               />
               <Route path="*" element={<Error message="Page not found ❌" />} />
-              <Route path="/search" element={<SearchPage />} />
+              <Route path="/InfoSphere/search" element={<SearchPage />} />
               <Route
                 path="/article/:articleId/:topic"
                 element={<SearchPageArticle />}

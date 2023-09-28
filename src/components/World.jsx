@@ -6,15 +6,15 @@ import Error from "./resusable/Error";
 import { useApi } from "./Functionality/ApiContext";
 
 export default function World() {
-  const { world, isLoading, error } = useApi();
+  const { isWorldError, isWorldLoading, world } = useApi();
 
   return (
     <div className="container-xxl p-2">
-      {error ? (
-        <Error message={error} />
+      {isWorldError ? (
+        <Error message={isWorldError} />
       ) : (
         <>
-          {isLoading ? (
+          {isWorldLoading ? (
             <IsLoading />
           ) : (
             <>
