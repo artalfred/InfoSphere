@@ -72,7 +72,7 @@ export default function Navbar() {
         >
           <div className="container-xxl">
             <div className="d-flex justify-content-start align-items-center gap-5 scroll py-2">
-              <NavLink reloadDocument to="/InfoSphere">
+              <NavLink reloadDocument to="/">
                 <p className="f-xs pb-0 ">Home</p>
               </NavLink>
               <NavLink reloadDocument to="/world">
@@ -106,7 +106,7 @@ export default function Navbar() {
       >
         <div className="container-xxl">
           <div className="d-flex justify-content-center align-items-center gap-5 scroll py-2">
-            <NavLink reloadDocument to="/InfoSphere">
+            <NavLink reloadDocument to="/">
               <p className="f-xs pb-0 ">Home</p>
             </NavLink>
             <NavLink reloadDocument to="/world">
@@ -158,11 +158,7 @@ export default function Navbar() {
             className="d-grid w-100 py-4"
             style={{ marginTop: "1rem", paddingLeft: ".5rem" }}
           >
-            <NavLink
-              reloadDocument
-              className="border-top py-3"
-              to="/InfoSphere"
-            >
+            <NavLink reloadDocument className="border-top py-3" to="/ ">
               <p className="fs-5 pb-0 ">Home</p>
             </NavLink>
             <NavLink reloadDocument className="border-top py-3" to="/world">
